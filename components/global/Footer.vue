@@ -1,17 +1,17 @@
 <template>
 <footer>
 	<div class="wrap">
-		<div class="content">
-			<div class="grid justify-content-center border-bottom pb5 mb5 text-center text-md-left">
-				<div class="grid-l2 grid-m6 grid-s12">
+		
+			<div class="grid justify-content-center  pb5 mb5 text-center text-md-left">
+				<div class="grid-l3 grid-m6 grid-s12">
 					  <img 
-                        src="~assets/voh-logo.png" 
-                        class="" 
+                        src="~assets/svg/voh_logo.png" 
+                        class="footer-logo" 
                         alt=""                    
                         />
 				</div>
                 
-                <div class="grid-l2 grid-m6 grid-s12">
+                <div class="grid-l3 grid-m6 grid-s12">
 					<p class="h4-style" role="heading">Services</p>
 					<ul>
 					    <li><a href="/"  class=""> Gynecology Services</a></li>
@@ -22,7 +22,7 @@
 					</ul>
 				</div>
 
-				<div class="grid-l2 grid-m6 grid-s12">
+				<div class="grid-l3 grid-m6 grid-s12">
 					<p class="h4-style" role="heading">Community</p>
 					<ul>
 						<li><a href="/"  class=""> Events</a></li>
@@ -32,7 +32,7 @@
 					</ul>
 				</div>
 
-            <div class="grid-l2 grid-m6 grid-s12">
+            <div class="grid-l3 grid-m6 grid-s12">
                 <p class="h4-style" role="heading">Connect</p>
                 <ul>
                     <li><a href="/"  class=""> About Us</a></li>
@@ -75,6 +75,87 @@
 				</div> -->
 			</div>
 
+            <div class="voh-center">
+			<div class="grid justify-content-center border-bottom pb5 mb5 text-center text-md-left">
+				<div class="grid-l3 grid-m6 grid-s12">
+					  <img 
+                        src="~assets/svg/voh_center_logo.png" 
+                        class="footer-logo" 
+                        alt=""                    
+                        />
+				</div>
+                
+                <div class="grid-l3 grid-m6 grid-s12">
+					<p class="h4-style" role="heading">The Village of Healing Center</p>
+					<p> 22344 Lakeshore Blvd. <br> Euclid, Ohio 44123 </p>
+                    <span class="h5-style">Hours</span>
+                    <p> Monday - Friday: <br> 8:30AM - 5:00PM </p>
+                    <p> Saturday & Sunday: <br> Closed </p>
+				</div>
+
+				<div class="grid-l3 grid-m6 grid-s12">
+					<p class="h4-style" role="heading">Get in Touch</p>
+					<ul>
+						<li><a href="/"  class=""> (216) 815-HEAL (4325)</a></li>
+                        <li><a href="/"  class=""> Fax: (216) 815-4501</a></li>
+                        <li><a href="/"  class=""> admin@villageofhealingcle.com</a></li>
+                        
+					</ul>
+				</div>
+
+                <div class="grid-l3 grid-m6 grid-s12">
+                    <ul class="social">
+                       
+                        
+                        <li>
+                            <a href="/" class="linkedin link-hover" data-ga-label="linkedin">
+
+                                <img 
+                                    src="~assets/svg/linkedin.svg" 
+                                    class="footer-icon" 
+                                    alt=""                    
+                                />                       
+                                 <span class="sr-only">Follow Village of Healing on LinkedIn</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/" class="instagram link-hover mr-2" data-ga-label="instagram">
+                                <img 
+                                    src="~assets/svg/instagram.svg" 
+                                    class="footer-icon" 
+                                    alt=""                    
+                                /> 
+                                <span class="sr-only">Follow Village of Healing on Instagram</span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="/" class="facebook link-hover mr-2" data-ga-label="facebook">
+                                <img 
+                                    src="~assets/svg/facebook.svg" 
+                                    class="footer-icon" 
+                                    alt=""                    
+                                /> 
+                                <span class="sr-only">Follow Village of Healing on Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/" class="twitter link-hover mr-2" data-ga-label="twitter">
+                                <img 
+                                    src="~assets/svg/twitter.svg" 
+                                    class="footer-icon" 
+                                    alt=""                    
+                                /> 
+                                <span class="sr-only">Follow Village of Healing on Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+                                    
+                    
+                </div>
+			</div>
+            </div>
+
 			<div class="row">
 				<div class="grid-l12">
 					<div class="terms">
@@ -85,8 +166,7 @@
 				</div>
 			</div>
 		</div>
-			<img src="https://siteserver.progressivecommercial.com/session/checkid/" width="1" height="1" alt="" style="visibility:hidden">
-	</div>
+	
 	</footer>
 </template>
 
@@ -113,15 +193,34 @@ footer {
     color:  #fff;
 
     a {
+        font-family: $roboto;
         color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+
+        &:hover {
+            border-bottom: 1px solid #eee;
+        }
+
+    }
+
+    .footer-icon {
+        width: 25px;
+        height: 25px;
     }
 
     p {
         color: $white;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
     }
 
-    .h4-style {
+    .h4-style, .h5-style {
         color: $white;
+    }
+
+    .h5-style {
+        margin-top: 10px;
     }
 
     .wrap {
@@ -129,7 +228,11 @@ footer {
         padding-bottom: 4rem;
     }
 
-
+    .footer-logo {
+        padding: 20px 20px 20px 0px;
+        width: 100%;
+        max-width: 145px;
+    }
  
 
     .social  {
@@ -141,12 +244,10 @@ footer {
         }
 
         a {
-            background-color: $gray!important;
-            border-radius: 50%;
+           
             box-sizing: content-box;
             display: inline-block;
-            height: 15px;
-            width: 15px;
+           
             padding: 7px;
         }
 

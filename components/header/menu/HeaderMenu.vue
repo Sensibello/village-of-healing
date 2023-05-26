@@ -24,58 +24,78 @@
 
                     <ul class="lifelanes-menu-panel" id="lifelanes-dropdown"  v-show="openMenu">
                         <li class="nav-item border-bottom">
-                            <a class="nav-link" href="#" data-label="On the Road">
+                            <a class="nav-link" href="#" >
                                 <span class="align-together">
-                                    <img 
-                                        src="~assets/svg/menu-arrow.svg"
-                                        class="on-the-road" 
-                                        alt=""                    
-                                    />
-                                    <p class="">Link Title</p>
+                                    
+                                    <p class="">Home</p>
                                 </span>
-                                <span class="mobile-only nav-item-text">Tried and true tips for cars</span>
+                                <span class="mobile-only nav-item-text"></span>
                             </a>
                         </li>	
 
                         <li class="nav-item border-bottom">
-                            <a class="nav-link" href="#" data-label="Household">
+                             <a class="nav-link" href="#" >
                                 <span class="align-together">
-                                    <img 
-                                        src="~assets/svg/menu-arrow.svg"
-                                        class="household" 
-                                        alt=""                    
-                                    />
-                                    <p class="">Link Title 2</p>
+                                    
+                                    <p class="">About</p>
                                 </span>
-                                <span class="mobile-only nav-item-text">From moving to design, all under one roof</span>
+                                <span class="mobile-only nav-item-text"></span>
                             </a>
                         </li>
 
                         <li class="nav-item border-bottom">
-                            <a class="nav-link" href="#" data-label="Adventure">
+                           <a class="nav-link" href="#" >
                                 <span class="align-together">
-                                    <img 
-                                        src="~assets/svg/menu-arrow.svg"
-                                        class="adventure" 
-                                        alt=""                    
-                                    />
-                                    <p class="">Link Title 3</p>
+                                    
+                                    <p class="">Services</p>
                                 </span>
-                                <span class="mobile-only nav-item-text">Take off on your boat, motorcycle or RV</span>
+                                <span class="mobile-only nav-item-text"></span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-label="Turning Points">
+                            <a class="nav-link" href="#" >
                                 <span class="align-together">
-                                    <img 
-                                        src="~assets/svg/menu-arrow.svg"
-                                        class="turning-points" 
-                                        alt=""                    
-                                    />
-                                    <p class="">Link Title 4</p>
+                                    
+                                    <p class="">Programs</p>
                                 </span>
-                                <span class="mobile-only nav-item-text">Helping you to adjust to life's changes</span>
+                                <span class="mobile-only nav-item-text"></span>
+                            </a>
+                        </li>
+                           <li class="nav-item">
+                            <a class="nav-link" href="#" >
+                                <span class="align-together">
+                                    
+                                    <p class="">Community</p>
+                                </span>
+                                <span class="mobile-only nav-item-text"></span>
+                            </a>
+                        </li>
+                           <li class="nav-item">
+                            <a class="nav-link" href="#" >
+                                <span class="align-together">
+                                    
+                                    <p class="">Careers</p>
+                                </span>
+                                <span class="mobile-only nav-item-text"></span>
+                            </a>
+                        </li>
+                           <li class="nav-item">
+                            <a class="nav-link" href="#" >
+                                <span class="align-together">
+                                    
+                                    <p class="">Contact</p>
+                                </span>
+                                <span class="mobile-only nav-item-text"></span>
+                            </a>
+                        </li>
+                           <li class="nav-item">
+                            <a class="nav-link" href="#" >
+                                <span class="align-together">
+                                    
+                                    <p class="">Donate</p>
+                                </span>
+                                <span class="mobile-only nav-item-text"></span>
                             </a>
                         </li>
                         <!-- Start: Nav utility footer -->
@@ -111,15 +131,7 @@
         
         <!-- START: DESKTOP MENU-->
         <nav class="menu lifelanes-desktop desktop-only">
-            <a class="navbar-brand" href="#">
-                <img 
-                    src="~assets/svg/menu-arrow.svg"
-                    alt="Life Lanes logo" 
-                    aria-label="Lifelanes" 
-                    class="logo-text" 
-                />			
-                <span class="sr-only">Village of Healing home</span>
-            </a>
+            
         
             <ul 
                 class="nav" 
@@ -131,50 +143,56 @@
 
                 <li class="nav-item" role="presentation">
                     <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">Home</span>
+                    </a>
+                </li>
+                 <li class="nav-item" role="presentation">
+                    <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">About</span>
+                    </a>
+                </li>
+                 <li class="nav-item" role="presentation">
+                    <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">Services</span>
+                    </a>
+                </li>
+                 <li class="nav-item" role="presentation">
+                    <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">Programs</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item" role="presentation">
+                  <a class="navbar-brand" href="#">
                         <img 
                             src="~assets/svg/menu-arrow.svg"
-                            class="on-the-road" 
-                            alt=""                    
-                        />
-                        <span class="nav-item-text">Link title</span>
+                            alt="Life Lanes logo" 
+                            aria-label="Lifelanes" 
+                            class="logo-text" 
+                        />			
+                        <span class="sr-only">Village of Healing home</span>
                     </a>
                 </li>
 
-                <li class="nav-item" role="presentation">
-                    <a class="btn nav-link" href="#">	
-                        <img 
-                            src="~assets/svg/menu-arrow.svg"
-                            class="household" 
-                            alt=""                    
-                        />
-                        <span class="nav-item-text">Link title 2</span>	
+                 <li class="nav-item" role="presentation">
+                    <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">Community</span>
                     </a>
                 </li>
-
-                <li class="nav-item" role="presentation">
-                    <a class="btn nav-link" href="#">	
-                        <img 
-                            src="~assets/svg/menu-arrow.svg"
-                            class="adventure" 
-                            alt=""                    
-                        />
-                        <span class="nav-item-text">Link title 3</span>	
+                 <li class="nav-item" role="presentation">
+                    <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">Careers</span>
                     </a>
                 </li>
-
-                <li class="nav-item" role="presentation">
-                    <a class="btn nav-link" href="#">	
-                        <img 
-                           src="~assets/svg/menu-arrow.svg"
-                            class="turning-points" 
-                            alt=""                    
-                        />
-                        <span class="nav-item-text">Link title 4</span>	
-                    </a>                  
+                 <li class="nav-item" role="presentation">
+                    <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">Contact</span>
+                    </a>
                 </li>
-
-                 <li class="desktop-only nav-item" role="">
-                   <HeaderQuoteModal/>
+                 <li class="nav-item" role="presentation">
+                    <a class="btn nav-link" href="#">
+                        <span class="nav-item-text">Donate</span>
+                    </a>
                 </li>
                 
 

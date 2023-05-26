@@ -253,25 +253,6 @@
 
 /* h5 + immediate sibling
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@include spacing('h5.sub-line', h2) {
-	margin-top: 0.8888888em;
-}
-
-@include spacing('.h5-style.sub-line', h2) {
-	margin-top: 0.8888888em;
-}
-
-@include spacing('h5.sub-line', h3) {
-	margin-top: 1.3333em;
-}
-
-@include spacing('.h5-style.sub-line', h3) {
-	margin-top: 1.3333em;
-}
-
-@include spacing('p.sub-line', h2) {
-	margin-top: 0.8888888em;
-}
 
 
 /* Lists

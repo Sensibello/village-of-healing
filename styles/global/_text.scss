@@ -74,11 +74,8 @@ h3, .h3-style {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
  h5, .h5-style {
     color: $gray-900;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: $font-bold;
-    line-height: 1.5;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
 
     // &.sub-line {
     //     overflow: hidden;
@@ -112,12 +109,12 @@ h3, .h3-style {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 p {
-    font-family: $roboto;
+    font-family: roboto;
     color: $gray-900;
     font-weight: $font-regular;
-    line-height: 1.65;
-    font-size: 1.2rem;
-    // font-size: 1.15em;
+    line-height: 1.35;
+    font-size: 1.3rem;
+    letter-spacing: 0;
 
     // @include media(sm){
 	// 	font-size: 0.775em;
@@ -132,7 +129,7 @@ p {
     // }
     
     a {
-        
+        font-family: $poppins;
     }
 }
 
