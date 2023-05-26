@@ -1,1 +1,0 @@
-export { default } from "file:///Users/a155246/Desktop/village-of-healing/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
