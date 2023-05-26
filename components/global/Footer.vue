@@ -3,30 +3,48 @@
 	<div class="wrap">
 		<div class="content">
 			<div class="grid justify-content-center border-bottom pb5 mb5 text-center text-md-left">
-				<div class="grid-l3 grid-m6 grid-s12">
-					<p class="h4" role="heading" aria-level="4">Category</p>
+				<div class="grid-l2 grid-m6 grid-s12">
+					  <img 
+                        src="~assets/voh-logo.png" 
+                        class="" 
+                        alt=""                    
+                        />
+				</div>
+                
+                <div class="grid-l2 grid-m6 grid-s12">
+					<p class="h4-style" role="heading">Services</p>
 					<ul>
-						<li><a href="/" data-ga-label="on-the-road">On the Road</a></li>
-						<li><a href="/"  data-ga-label="household">Household</a></li>
-						<li><a href="/"  data-ga-label="adventure">Adventure</a></li>
-						<li><a href="/"  data-ga-label="turning-points">Turning Points</a></li>
+					    <li><a href="/"  class=""> Gynecology Services</a></li>
+                        <li><a href="/"  class="">Obstetric Services </a></li>
+                        <li><a href="/"  class="">Mental Health Services </a></li>
+                        <li><a href="/"  class=""> Vaccines</a></li>
+                        <li><a href="/"  class="">Accepted Insurance </a></li>
 					</ul>
 				</div>
 
-				<div class="grid-l3 grid-m6 grid-s12">
-					<p class="h4" role="heading" aria-level="4">Our Company</p>
+				<div class="grid-l2 grid-m6 grid-s12">
+					<p class="h4-style" role="heading">Community</p>
 					<ul>
-						<li><a href="/"  data-ga-label="progressive-app">Progressive App</a></li>
-						<li><a href="/"  data-ga-label="progressive-answers">Progressive Answers</a></li>
-						<li><a href="/"  data-ga-label="about-progressive">About Progressive</a></li>
-						<li><a href="/"  data-ga-label="contact-us">Contact Us</a></li>
-						<li><a href="/"  data-ga-label="progressive-app">Car Insurance</a></li>
-						<li><a href="/"  data-ga-label="progressive-answers">Home Insurance</a></li>
-						<li><a href="/"  data-ga-label="about-progressive">Sitemap</a></li>
+						<li><a href="/"  class=""> Events</a></li>
+                        <li><a href="/"  class=""> In the News</a></li>
+                        <li><a href="/"  class=""> Our Village</a></li>
+                        <li><a href="/"  class=""> Programs</a></li>
 					</ul>
 				</div>
 
-				<div class="grid-l3 grid-m6 grid-s12">
+            <div class="grid-l2 grid-m6 grid-s12">
+                <p class="h4-style" role="heading">Connect</p>
+                <ul>
+                    <li><a href="/"  class=""> About Us</a></li>
+                    <li><a href="/"  class=""> Careers</a></li>
+                    <li><a href="/"  class=""> Blog</a></li>
+                    <li><a href="/"  class=""> Contact Us</a></li>
+                    <li><a href="/"  class=""> Donate</a></li>
+                 
+                </ul>
+			</div>
+
+				<!-- <div class="grid-l3 grid-m6 grid-s12">
 					<ul class="social">
 						<li>
 							<a href="https://www.facebook.com/progressive" class="facebook link-hover mr-2" data-ga-label="facebook">
@@ -52,48 +70,17 @@
 							</a>
 						</li>
 					</ul>
-					<div class="search-form">
-						<div class="search-field">
-							<form id="search-form" class="mx-auto" method="get" action="https://61-www.dev.progressive.com/lifelanes//search">
-								<label for="search-form">Search</label>
-								<input type="search" name="search-form" id="search" value="" class="border-0">
-								<button class="search-submit border-0" id="search-form-submit" type="submit">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.9803 21.9819" focusable="false" aria-hidden="true"><title>search</title><path d="M21.5409,19.4214l-4.36-4.36A9.51,9.51,0,1,0,15.06,17.1826l4.3595,4.36a1.5,1.5,0,0,0,2.1211-2.1211ZM4.8988,14.0933a6.5,6.5,0,1,1,9.1924,0A6.5089,6.5089,0,0,1,4.8988,14.0933Z"></path></svg>
-								<span class="sr-only">Search</span>
-								</button>
-							</form>
-						</div>
-					</div>						
-					<p class="h4 mb-4" role="heading" aria-level="4">Life Lanes brought to you by</p>
-					<a href="https://www.progressive.com/" class="my-3 footer-logo">
-						<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456.21 54.41" focusable="false" aria-hidden="true">
-							<title>Progressive Logo</title>
-							<path d="M222.81,30.52c4.9-.51,8.41-2.82,10.39-6.92,1.62-3.34,4.12-8.75,4.14-8.81,2.48-5.12,1.72-8.25.64-10-1.62-2.59-4.79-3.51-7.2-3.51H206.23l-25.41,54h12.76l9.73-21.21,6.84,0a3.87,3.87,0,0,1,2.9,1.59c.82,1.36.6,3.44-.69,6.18-3.08,6.61-5.53,13.46-5.53,13.46h12.94a29,29,0,0,1,1.57-5.22c1-2.36,4-9.82,4-9.89C227.81,34.14,224.75,31.72,222.81,30.52Zm-1.35-8.91c-1.08,2.28-2.74,3.44-4.95,3.44h-8.9l6.75-14.7h9.74a1.75,1.75,0,0,1,1.32.7c.39.64.25,1.71-.4,3.1l-2.23,4.68Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M86.61,30.52C91.51,30,95,27.69,97,23.59c1.62-3.34,4.12-8.75,4.15-8.81,2.48-5.12,1.72-8.25.64-10C100.17,2.23,97,1.31,94.58,1.31H70l-25.41,54H57.38l9.73-21.21,6.85,0a3.87,3.87,0,0,1,2.9,1.59c.83,1.36.6,3.44-.69,6.18-3.08,6.61-5.53,13.46-5.53,13.46H83.58a28.74,28.74,0,0,1,1.56-5.22c1-2.36,4-9.82,4-9.89C91.62,34.14,88.55,31.72,86.61,30.52ZM85.26,21.6C84.18,23.89,82.52,25,80.32,25h-8.9l6.94-14.7h9.54a1.75,1.75,0,0,1,1.32.7c.39.64.25,1.71-.4,3.1l-2.23,4.68Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M146.53,14.74C151,5.16,145.94,1,139.5,1H124c-6.52,0-11.12,3.08-14.08,9.41-1.59,3.4-4.24,9-7.31,15.39L96.13,39.46c-6.51,13.7,3.23,16,8,16h9.79c9.81.1,14.64-2.67,18.43-10.57,2.54-5.28,6.06-12.82,9.8-20.81ZM133.8,13.22l-13,27.69c-1.81,3.82-3,4.47-5.81,4.47h-5.62c-1,0-3-.27-1.5-3.54,2.18-4.7,11.32-24.4,13.19-28.36,1.27-2.7,2.59-3.24,4.31-3.24h7C133.7,10.18,134.89,10.91,133.8,13.22Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M167.79,25.33l-4.24,9h6.72l-3.78,8.17c-1.1,2.37-1.85,2.85-4.44,2.85h-6.68c-2,0-2.7-1-1.5-3.54,1.52-3.22,13.52-28.28,13.52-28.28,1.36-2.85,2.17-3.28,4.27-3.28h6.9c1.67,0,2.57.77,1.45,3-.25.49-3,6.5-3,6.5l12.17.09,2.77-5.95C196,5.19,192.38,1.12,184,1H170.78a16,16,0,0,0-15,9.41C153.37,15.54,142,39.46,142,39.46c-4.16,8.75-1.75,16,9.63,16h10.16c8.12.08,12.11-1.19,15.82-9.31l9.47-20.75Z" transform="translate(-1.27 -1)"></path>
-							<polygon class="cls-1" points="349.96 0.14 324.52 54.22 337.63 54.22 363.23 0.14 349.96 0.14"></polygon>
-							<polygon class="cls-1" points="395.73 0.15 366.04 47.79 381.06 0.15 367.31 0.15 354.71 54.22 372.45 54.22 409.52 0.15 395.73 0.15"></polygon>
-							<path class="cls-1" d="M295.45,36.46l-1.1-20c-.13-2.41.46-5.68,4.87-5.68h8.86l4.55-9.64h-15.1c-12,0-16,7.31-15.57,15.9.28,5.25,1,22.33,1,22.33.18,4.12-1.4,6-5.25,6h-10.1l-4.53,9.81h16.1C289.86,55.24,296.15,48.27,295.45,36.46Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M324.54,16.48c-.13-2.41.46-5.68,4.87-5.68h8.86l4.55-9.64h-15.1c-9.92,0-16.14,5.42-15.57,15.9.29,5.25,1,22.33,1,22.33.19,4.12-1.39,6-5.25,6h-9.84l-4.53,9.81h15.84c11.74,0,16.88-8.4,16.26-18.78Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M250.43,31.05h16.41l4.21-9H254.58l5.24-11.22,17,0s4.46-9.59,4.46-9.59H251.66l-25.27,54h32L263,45.45H243.59Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M389.88,55.23h32l4.65-9.78H407.08l6.84-14.4h16.41l4.21-9H418.07l5.24-11.22,17,0s4.45-9.59,4.45-9.59H415.15Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M51.7,27.13c1.07-2.21,3.19-6.79,5.6-12.11,4.23-9.36-1-13.69-6.55-13.71H26.47L1.27,55.39h13.1l8.8-18.94s7.4,0,12.76,0C44.1,36.51,48.37,34,51.7,27.13ZM44.94,14.59c-2.36,5-4.16,8.74-4.36,9.15C39.52,26,38,27,35.71,27H27.49l7.77-16.83h8.24C45.31,10.18,46.6,11.09,44.94,14.59Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M455.35,4.91a1.2,1.2,0,0,0-.55-1.06,2.28,2.28,0,0,0-1.2-.24h-2.14V8.53h.6V6.26h1.1l1.41,2.27h.71L453.8,6.26C454.67,6.24,455.35,5.88,455.35,4.91ZM453,5.79h-.92V4h1.41c.61,0,1.28.09,1.28.85C454.74,5.9,453.67,5.79,453,5.79Z" transform="translate(-1.27 -1)"></path>
-							<path class="cls-1" d="M453.1,1.67a4.4,4.4,0,1,0,4.39,4.39A4.4,4.4,0,0,0,453.1,1.67Zm0,8.27A3.87,3.87,0,1,1,457,6.07,3.87,3.87,0,0,1,453.1,9.95Z" transform="translate(-1.27 -1)"></path>
-						</svg>
-						<span class="sr-only">Progressive Logo</span>
-					</a>
-				</div>
+									
+					
+				</div> -->
 			</div>
 
 			<div class="row">
 				<div class="grid-l12">
 					<div class="terms">
-						<a href="https://www.progressive.com/privacy/" class="border-right" data-ga-label="privacy-and-security">Privacy &amp; Security</a>
-						<a href="https://www.progressive.com/copyright/" class="border-right" data-ga-label="terms-and-conditions">Terms of Use</a>
-						<a href="https://www.progressive.com/privacy/privacy-data-request/" class="border-right" data-ga-label="ca-notice-at-collection">CA Notice at Collection</a>
-						<a href="https://www.progressive.com/privacy/do-not-sell-my-information/" data-ga-label="do-not-sell">Do Not Sell or Share My Personal Information (CA Residents Only)</a>
+						<a href="" class="border-right" data-ga-label="privacy-and-security">Privacy &amp; Security</a>
+						<a href="" class="border-right" data-ga-label="terms-and-conditions">Terms of Use</a>
+					
 					</div>
 				</div>
 			</div>
@@ -122,41 +109,28 @@ export default {
 
 footer {
 
-    background-color: #fff;
+    background-color: $gray-700;
+    color:  #fff;
+
+    a {
+        color: #fff;
+    }
+
+    p {
+        color: $white;
+    }
+
+    .h4-style {
+        color: $white;
+    }
 
     .wrap {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
 
-    .h4 {
-        color: $black;
-        font-family: $ninetysixsans;
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        margin: 10px 0 10px 0;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
 
-    .logo {
-        fill: $prog-blue;
-        max-height: 24px;
-        width: 200px;
-    }
-
-    ul:not(.social) li {
-        font-size: 1.4em;
-        margin: 20px 0 0;
-    }
-
-    a {
-        color: $black !important;
-        text-decoration: none!important;
-        border-bottom: 0px solid $white!important;
-        font-family: $ninetysixsans;
-        font-size: 1.4rem;
-    }
+ 
 
     .social  {
 
@@ -185,55 +159,9 @@ footer {
         
     }
 
-    #search-form {
-        margin: 30px 0;
-        max-width: 300px;
-        position: relative;
-
-        label {
-            cursor: text;
-            line-height: 35px;
-            position: absolute;
-            background-color: $lightest-gray;
-            border-radius: 17.5px;
-            height: 35px;
-            padding: 0 20px;
-            width: 100%;
-        }
-    }
-
-    #search {
-        background-color: $lightest-gray;
-        border-radius: 17.5px;
-        height: 35px;
-        padding: 0 20px;
-        width: 100%;
-    }
-
-    form {
-        font-size: 1.8em;
-    }
     
-    button {
-        background-color: transparent;
-        cursor: pointer;
-        border: 0!important;
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        z-index: 2;
 
-        svg {
-            fill: $black;
-            height: 20px;
-            width: 20px;
-        }
-    }
-
-    border-right {
-        border-color: $black !important;
-    }
-    
+ 
     .terms  {
         a {
             padding-right: 15px;

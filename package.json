@@ -16,6 +16,7 @@
         "swiper": "^9.2.0"
     },
     "devDependencies": {
+        "@nuxtjs/google-fonts": "^3.0.1",
         "sass": "^1.59.3"
     }
 }

@@ -11,7 +11,7 @@ table.is-standard {
 
     thead tr th {
         color: $gray-900;
-        font-family: $ninetysixsans-condensed;
+        font-family: $roboto;
         font-size: 1.8rem;
         font-weight: $font-bold;
         height: 5.5em;
@@ -28,7 +28,7 @@ table.is-standard {
 
     tbody tr {
         border-top: solid 1px $steel-blue-300;
-        font-family: $ninetysixsans;
+        font-family: $roboto;
         font-size: 1.2rem;
         font-weight: $font-bold;
 
@@ -111,7 +111,7 @@ table.is-standard {
                 & > .is-duplicate-heading {
                     color: $gray-900;
                     display: block;
-                    font-family: $ninetysixsans-condensed;
+                    font-family: $roboto;
                     font-size: 1.6rem;
                     font-weight: $font-bold;
                     line-height: 1.4;

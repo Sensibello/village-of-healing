@@ -82,7 +82,7 @@ export default {
 <style lang="scss" scoped>
 
 .article-container {
-    font-family: $ninetysixsans;
+    font-family: $roboto;
 
     display: flex;
     margin-top: 4rem;
@@ -117,7 +117,7 @@ export default {
             position: relative;
             right: 0;
             white-space: normal;
-            font-family: $ninetysixsans;
+            font-family: $roboto;
             font-weight: $font-light;
             text-decoration: none;
             color: $gray;
@@ -134,7 +134,7 @@ export default {
                     margin: 10px 0 10px 0;
 
                     a {
-                        font-family: $ninetysixsans;
+                        font-family: $roboto;
                         font-weight: $font-regular;
                         line-height: 1.2;
                         font-size: 2rem;
@@ -163,7 +163,7 @@ export default {
                 width: 14px !important;
             }
              a {
-                font-family: $ninetysixsans;
+                font-family: $roboto;
                 font-weight: $font-light;
                 text-decoration: none;
                 color: #767676;
@@ -180,7 +180,7 @@ export default {
             }
             
             .span-reading-time {
-                font-family: $ninetysixsans;
+                font-family: $roboto;
                 font-weight: $font-light;
                 text-decoration: none;
                 color: $gray;

@@ -1,42 +1,35 @@
 /* Fonts
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-$ninetysixsans: "96 Sans", Arial, sans-serif;
-$ninetysixsans-icons: "96 Sans Icons";
-$ninetysixsans-condensed: "96 Sans Condensed", "96 Sans", Arial, sans-serif;
-$ninetysixsans-monospaced: "96 Sans Monospaced", Consolas, Courier New, monospace;
 
-$font-light: 300;
-$font-regular: 400;
-$font-medium: 600;
-$font-bold: 700;
-$font-heavy: 800;
+
 
 /* H1 styles
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@mixin h1 {
-    //54, 32
+ h1, .h1-style {
+    font-family: $merriweather;
     color: $gray-900;
-    font-size: 2.3em;
+    font-size: 4.8rem;
     font-weight: $font-bold;
     letter-spacing: normal;
     line-height: 1.15;
     text-transform: none;
 }
 
-@mixin h1-subhead {
-    //24, 16
-    color: $gray-700;
-    font-size: clamp(1.6rem, 1.35em, 2.4rem);
-    font-weight: $font-light;
-    line-height: 1.333;
-    text-transform: none;
+ .h1-subhead {
+    font-family: $poppins;
+    color: $red;
+    font-size: 1.4rem;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+
 }
 
 /* H2 styles
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@mixin h2 {
+h2, .h2-style {
     //36, 22
+    font-family: $merriweather;
     color: $gray-900;
     font-size: 1.6em;
     font-weight: $font-light;
@@ -47,8 +40,9 @@ $font-heavy: 800;
 
 /* H3 styles
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@mixin h3 {
+h3, .h3-style {
     //24, 18
+    font-family: $merriweather;
     color: $gray-900;
     font-size: clamp(1.8rem, 1em, 2.4rem);
     font-weight: $font-bold;
@@ -57,7 +51,7 @@ $font-heavy: 800;
     text-transform: none;
 }
 
-@mixin h3-subhead {
+.h3-subhead {
     //18, 16
     color: $gray-700;
     font-size: clamp(1.6rem, 1em, 1.8rem);
@@ -67,10 +61,10 @@ $font-heavy: 800;
 
 /* H4 styles
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@mixin h4 {
+ h4, .h4-style {
     //18, 16
     color: $gray-900;
-    font-family: $ninetysixsans-condensed;
+    font-family: $roboto;
     font-weight: $font-bold;
     line-height: 1.4;
     font-size: clamp(1.6rem, 1em, 1.8rem);
@@ -78,7 +72,7 @@ $font-heavy: 800;
 
 /* H5 styles
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@mixin h5 {
+ h5, .h5-style {
     color: $gray-900;
     font-size: 1.2rem;
     font-weight: $font-bold;
@@ -108,7 +102,7 @@ $font-heavy: 800;
     // }
 }
 
-@mixin h5-subhead {
+.h5-subhead {
     color: $gray-700;
     font-size: 1.3rem;
     font-weight: $font-regular;
@@ -116,12 +110,13 @@ $font-heavy: 800;
 
 /* P styles
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@mixin p {
-    //16, 14
-    color: $gray-700;
+
+p {
+    font-family: $roboto;
+    color: $gray-900;
     font-weight: $font-regular;
     line-height: 1.65;
-    font-size: clamp(1.4rem, 0.875em, 1.6rem);
+    font-size: 1.2rem;
     // font-size: 1.15em;
 
     // @include media(sm){
@@ -135,12 +130,34 @@ $font-heavy: 800;
     // &.smaller-text {
     //     font-size: 1.2rem;
     // }
-    @include default-link;
+    
     a {
-        @include default-link;
+        
     }
 }
 
+
+.button {
+    background: $gold;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: $font-bold;
+    font-family: $poppins;
+    text-decoration: none;
+    padding: 5px 30px;
+    border-radius: 16px;
+}
+
+.primary-gold-btn {
+    background: $gold;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: $font-bold;
+    font-family: $poppins;
+    text-decoration: none;
+    padding: 5px 30px;
+    border-radius: 16px;
+}
 /* DL/DD styles
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 @mixin dl {

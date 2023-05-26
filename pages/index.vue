@@ -1,16 +1,18 @@
 <template>
 <main id="main" tabindex="-1">
 
-  <h4> sick slider test </h4>
-  <swiper-slider> </swiper-slider> 
   
   
   <article-cta  
-    header="Something to Discover"
-    title="Progressive Home"
-    description="Safety, maintenance, and DIY tips"
+    subhead="Lorum Ipsum"
+    title="I am a title"
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+        culpa qui officia deserunt mollit anim id est laborum."
     ctaLink="/"
-    ctaText="View more articles"
+    ctaText="About Us"
   />
 
 

@@ -11,8 +11,9 @@ $black: #2d2d2d;
 $gray: #767676;
 $lightest-gray: #eee;
 $light-gray: #f3f3f3;
+$red: #ae1f23;
+$gold: #d9a228;
 
-$prog-blue: #2d95e5;
 $blue-100: #f3f9fc;
 $blue-300: #8fd8f2;
 $blue-500: #4ebee5;
@@ -22,7 +23,7 @@ $blue-900: #2862a4;
 $gray-100: #f8f8f8;
 $gray-300: #ccc;
 $gray-500: #a6a6a6;
-$gray-700: #707070;
+$gray-700: #393939;
 $gray-900: #2d2d2d;
 
 $green-100: #effbf7;
@@ -69,10 +70,13 @@ $yellow-900: #a86800;
 /* Fonts
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-$ninetysixsans: "96 Sans", Arial, sans-serif;
-$ninetysixsans-icons: "96 Sans Icons";
-$ninetysixsans-condensed: "96 Sans Condensed", "96 Sans", Arial, sans-serif;
-$ninetysixsans-monospaced: "96 Sans Monospaced", Consolas, Courier New, monospace;
+
+$arimo: 'Arimo', sans-serif;
+$merriweather:  'Merriweather', serif;
+$poppins: 'Poppins', sans-serif;
+$questrial: 'Questrial', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
 
 $font-light: 300;
 $font-regular: 400;
@@ -85,23 +89,10 @@ $font-heavy: 800;
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 p {
     a {
-        color: #2d2d2d;
-        position: relative;
-        // font-size: 1.3rem;
-        text-transform: none!important;
-        transition: border .2s ease-in,background-size .2s ease-in;
-        background: linear-gradient( 120deg,rgba(0,119,179,.1) 0%,rgba(0,119,179,.1) 100%) no-repeat;
-        background-position: 0 100%;
-        background-size: 100% 0;
-        border-bottom: 1px solid #0077b3;
       
-        padding-bottom: 0.1em;
-        text-decoration: none;
     
         &:hover {
-            background-size: 100% 100%;
-            border-bottom: 0 solid rgba(0,119,179,.1);
-            color: #2d2d2d;
+          
         }
       }
 }
@@ -788,7 +779,7 @@ $themes-gradients-4: $red-500, $green-500, $purple-500, $blue-500, $orange-500, 
     border-radius: 5px;
     box-sizing: border-box;
     cursor: pointer;
-    font-family: $ninetysixsans;
+    font-family: $roboto;
     font-size: 2rem;
     font-weight: $font-bold;
     line-height: 1;
@@ -865,7 +856,7 @@ $themes-gradients-4: $red-500, $green-500, $purple-500, $blue-500, $orange-500, 
     color: $gray-900;
     cursor: pointer;
     display: inline-block;
-    font-family: $ninetysixsans;
+    font-family: $roboto;
     font-size: 2rem;
     font-weight: $font-bold;
     line-height: 1;
@@ -957,7 +948,7 @@ $themes-gradients-4: $red-500, $green-500, $purple-500, $blue-500, $orange-500, 
         padding: 0.5em 0;
         position: relative;
         font-size: 1.8rem;
-        font-family: $ninetysixsans;
+        font-family: $roboto;
         z-index: 2;
     }
 

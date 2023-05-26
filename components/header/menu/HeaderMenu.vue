@@ -238,7 +238,7 @@ export default {
 
    .nav-link {
     span {
-        font-family: $ninetysixsans;
+        font-family: $roboto;
         font-weight: $font-medium;
         margin-left: 0.5rem;
         margin-right: 1.5rem;
@@ -321,7 +321,7 @@ export default {
     .hamburger {
         background: white;
         border: none;
-        font-family: $ninetysixsans;
+        font-family: $roboto;
         font-size: 1.25rem;
         font-weight: 700;
         padding: 0;
@@ -516,13 +516,13 @@ export default {
 
     .get-a-quote {
         .action-link {
-            border: 1px solid $prog-blue;
+            border: 1px solid #000;
             border-radius: 8px;
             padding: 6px 10px;
             font-size: 1.2rem;
             font-weight: 500;
             text-decoration: none;
-            color: $prog-blue;
+            color: #000;
             font-weight: 900;
         }
     }
