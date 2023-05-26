@@ -1,0 +1,125 @@
+// Filename: _table.scss
+// Description: Global/structural table styles to be used throughout the experience
+@import "_patterns";
+
+
+/* Global Table Styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+table.is-standard {
+    margin-top: 1.5em;
+    width: 100%;
+
+    thead tr th {
+        color: $gray-900;
+        font-family: $ninetysixsans-condensed;
+        font-size: 1.8rem;
+        font-weight: $font-bold;
+        height: 5.5em;
+        line-height: 1.4;
+        padding: .25em 2em;
+        position: relative;
+        text-align: left;
+        vertical-align: middle;
+
+        & + th {
+            border-left: solid 1px $steel-blue-300;
+        }
+    }
+
+    tbody tr {
+        border-top: solid 1px $steel-blue-300;
+        font-family: $ninetysixsans;
+        font-size: 1.2rem;
+        font-weight: $font-bold;
+
+        td {
+            font-size: 1.6rem;
+            font-weight: $font-regular;
+            height: 5.5em;
+            padding: .25em 2em;
+            position: relative;
+            text-align: left;
+            vertical-align: middle;
+
+            & + td {
+                border-left: solid 1px $steel-blue-300;
+            }
+
+            & > .is-duplicate-heading {
+                display: none;
+            }
+        }
+    }
+
+    &.collapse-borders {
+        th + th,
+        td + td {
+            border-left: none;
+        }
+    }
+}
+
+@include size(780px) {
+    table.is-standard {
+        tbody tr td {
+            text-align: center;
+        }
+
+        &.collapse-borders {
+            th + th,
+            td + td {
+                border-left: solid 1px $steel-blue-300;
+            }
+
+            td {
+                padding-bottom: 0;
+
+                & + td {
+                    border-top: none;
+                    margin-top: 0;
+                    padding-top: 1em;
+                    padding-bottom: 2em;
+                }
+            }
+        }
+    }
+}
+
+@include size($size-small) {
+    table.is-standard {
+        thead {
+            display: none;
+        }
+
+        tbody tr {
+            border: none;
+            border-bottom: solid 1px $steel-blue-300;
+            display: block;
+            margin-top: 2.4rem;
+
+            td {
+                border-left: solid 1px $steel-blue-300;
+                border-right: solid 1px $steel-blue-300;
+                border-top: solid 1px $steel-blue-300;
+                box-sizing: border-box;
+                display: block;
+                font-size: 1.4rem;
+                height: auto;
+                padding: 2em;
+                width: 100%;
+
+                & > .is-duplicate-heading {
+                    color: $gray-900;
+                    display: block;
+                    font-family: $ninetysixsans-condensed;
+                    font-size: 1.6rem;
+                    font-weight: $font-bold;
+                    line-height: 1.4;
+                    margin-bottom: .5rem;
+                    position: relative;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

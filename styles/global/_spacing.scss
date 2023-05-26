@@ -1,0 +1,316 @@
+// Filename:	_spacing.scss
+// Description: Tag + tag based spacing, spacing helper classes. Module spacing lives in their spacing files.
+@use "sass:math";
+@use "sass:list";
+
+@import "_patterns";
+
+
+/* Standard module spacing
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+[data-module] + .content.lead-in,
+[data-module] + [data-module]:not([data-ignore-spacing]) {
+	@include module-spacing;
+}
+
+.content + .content,
+[data-module] + .content,
+.content + [data-module]:not([data-ignore-spacing]) {
+	@include large-spacing;
+}
+
+* + .content-image,
+.small-spacing {
+	@include small-spacing("!important");
+}
+
+/* Padding / Margin helpers
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@for $i from 0 through 10 {
+	.pt#{$i} {
+		padding-top: $i * 1em !important;
+	}
+
+	.pb#{$i} {
+		padding-bottom: $i * 1em !important;
+	}
+
+	.mt#{$i} {
+		margin-top: $i * 1em !important;
+	}
+
+	.mb#{$i} {
+		margin-bottom: $i * 1em !important;
+	}
+}
+
+@include size(medium) {
+	@for $i from 0 through 10 {
+		.pt#{$i} {
+			padding-top: $i * 0.8em !important;
+		}
+
+		.pb#{$i} {
+			padding-bottom: $i * 0.8em !important;
+		}
+
+		.mt#{$i} {
+			margin-top: $i * 0.8em !important;
+		}
+
+		.mb#{$i} {
+			margin-bottom: $i * 0.8em !important;
+		}
+	}
+}
+
+@include size(tiny) {
+	@for $i from 0 through 10 {
+		.pt#{$i} {
+			padding-top: $i * 0.6em !important;
+		}
+
+		.pb#{$i} {
+			padding-bottom: $i * 0.6em !important;
+		}
+
+		.mt#{$i} {
+			margin-top: $i * 0.6em !important;
+		}
+
+		.mb#{$i} {
+			margin-bottom: $i * 0.6em !important;
+		}
+	}
+}
+
+
+/* H1 + immediate sibling
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing(h1, p) {
+	margin-top: 2em;
+}
+
+@include spacing(h1, '.h1-subhead') {
+	margin-top: 0.5em;
+}
+
+@include spacing(h1, h2) {
+	margin-top: 1.333333em;
+}
+
+@include spacing(h1, h3) {
+	margin-top: 1.333333em;
+}
+
+@include spacing(h1, h3) {
+	margin-top: 2em;
+}
+
+@include spacing(h1, h4) {
+	margin-top: 2.6666667em;
+}
+
+@include spacing(h1, h5) {
+	margin-top: 4em;
+}
+
+@include spacing(h1, ul) {
+	margin-top: 4.8em;
+}
+
+@include spacing(h1, ol) {
+	margin-top: 4.8em;
+}
+
+@include spacing(h1, button) {
+	margin-top: 2em;
+}
+
+
+/* H2 + immediate sibling
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing(h2, p) {
+	margin-top: 1em;
+}
+
+@include spacing("h2.h1-subhead", p) {
+	margin-top: 1.5em;
+}
+
+@include spacing(h2, h3) {
+	margin-top: 1.25em;
+}
+
+@include spacing(h2, h4) {
+	margin-top: 2.66667em;
+}
+
+@include spacing(h2, ul) {
+	margin-top: 3.2em;
+}
+
+@include spacing(h2, ol) {
+	margin-top: 3.2em;
+}
+
+@include spacing(h2, button) {
+	margin-top: 2em;
+}
+
+
+/* H3 + immediate sibling
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing(h3, p) {
+	margin-top: 1em;
+}
+
+@include spacing(h3, '.h3-subhead') {
+	margin-top: 0.25em;
+}
+
+@include spacing(h3, h4) {
+	margin-top: 1.7777em;
+}
+
+
+@include spacing(h3, ".bullets.two-col") {
+	margin-top: 1.5rem;
+}
+
+@include spacing(h3, ol) {
+	margin-top: 3.2em;
+}
+
+@include spacing(h3, button) {
+	margin-top: 2em;
+}
+
+
+/* H4 + immediate sibling
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing(h4, p) {
+	margin-top: 0.875em;
+}
+
+
+
+@include spacing(h4, ".bullets.two-col") {
+	margin-top: 2em;
+}
+
+@include spacing(h4, button) {
+	margin-top: 2em;
+}
+
+
+/* p + immediate sibling
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing(p, p) {
+	margin-top: 1.5em;
+}
+
+@include spacing(p, h2) {
+	margin-top: 1.6667em;
+}
+
+@include spacing(p, h3) {
+	margin-top: 2em;
+}
+
+@include spacing(p, h4) {
+	margin-top: 1.7778em;
+}
+
+@include spacing(p, h5) {
+	margin-top: 4.8em;
+}
+
+
+
+@include spacing(p, ".numbers:not(.two-col) li:first-child") {
+	margin-top: 1.15em;
+}
+
+@include spacing(p, ".bullets.two-col") {
+	margin-top: 1.5rem;
+}
+
+@include spacing(p, ".block-link") {
+	margin-top: 2em;
+}
+
+@include size(small) {
+	@include spacing(p, ".block-link") {
+		margin-top: 1.5em;
+	}
+}
+
+@include spacing(p, ".secondary-button") {
+	margin-top: 3em;
+}
+
+
+/* h5 + immediate sibling
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing('h5.sub-line', h2) {
+	margin-top: 0.8888888em;
+}
+
+@include spacing('.h5-style.sub-line', h2) {
+	margin-top: 0.8888888em;
+}
+
+@include spacing('h5.sub-line', h3) {
+	margin-top: 1.3333em;
+}
+
+@include spacing('.h5-style.sub-line', h3) {
+	margin-top: 1.3333em;
+}
+
+@include spacing('p.sub-line', h2) {
+	margin-top: 0.8888888em;
+}
+
+
+/* Lists
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing('.bullets', p) {
+	margin-top: 2em;
+}
+
+@include spacing('.bullets', h2) {
+	margin-top: 1.6667em;
+}
+
+@include spacing('.bullets', h3) {
+	margin-top: 2em;
+}
+
+@include spacing('.bullets', h4) {
+	margin-top: 1.7778em;
+}
+
+@include spacing('.numbers', p) {
+	margin-top: 2em;
+}
+
+@include spacing('.numbers', h2) {
+	margin-top: 1.6667em;
+}
+
+@include spacing('.numbers', h3) {
+	margin-top: 2em;
+}
+
+@include spacing('.numbers', h4) {
+	margin-top: 1.7778em;
+}
+
+
+/* .block-link + immediate sibling
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include spacing('.block-link', h3) {
+	margin-top: 2em;
+}

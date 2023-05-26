@@ -1,0 +1,180 @@
+// Filename:	_links.scss
+// Description: Global-use link styles - these need to be included on a module-by-module basis
+@import "_patterns";
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+a {
+	&:focus {
+		@include focus;
+	}
+
+	&.focus-white:focus {
+		@include focus(3px, dashed, white);
+	}
+
+	&:hover,
+	&:focus {
+		.block-link.bounce {
+			.last-word .arrow {
+				@include animation(side-bounce 0.5s);
+			}
+		}
+	}
+
+	&[href^="tel:"] {
+		white-space: nowrap;
+	}
+}
+
+.text-links {
+	@include text-links;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.block-link {
+	&:focus {
+		@include focus;
+	}
+
+	&:not(.title):not(.text) {
+		background: none;
+		border: none;
+		display: inline-block;
+		color: $blue-700;
+		cursor: pointer;
+		font-size: 1.6em;
+		font-weight: $font-medium;
+		line-height: 1.3;
+		overflow: visible;
+		padding-bottom: 0;
+		position: relative;
+		text-decoration: none;
+		transition: color 0.3s ease-in-out;
+		z-index: 1;
+
+		&:hover,
+		&:focus {
+			color: $blue-900;
+
+			&::before {
+				background: rgba($blue-300, 0.4);
+				width: 100%;
+			}
+		}
+	}
+
+	&:not(.is-simple) {
+		padding-left: 1em;
+		padding-right: 1em;
+
+		&::before {
+			background: $blue-300;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 1px;
+			left: 0;
+			bottom: -1px;
+			width: 2px;
+			transform: skewX(-25deg);
+			transition: background 0.3s ease-in-out, width 0.3s ease-in-out;
+			z-index: -1;
+		}
+	}
+
+	.last-word {
+		white-space: nowrap;
+	}
+
+
+	.arrow {
+		bottom: -0.15em;
+		display: inline-block;
+		font-family: $ninetysixsans-icons;
+		font-size: 1.2em;
+		padding-left: 0.5em;
+		position: relative;
+	}
+}
+
+.bounce {
+	text-decoration: none;
+
+	&:hover .last-word .arrow,
+	&:focus .last-word .arrow {
+		@include animation(side-bounce 0.5s);
+	}
+}
+
+.list-link {
+	color: $blue-700;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.app-link-list {
+	@include flexbox;
+	@include flex-wrap(wrap);
+	margin-left: -0.9em;
+	margin-right: -0.9em;
+
+	* + & {
+		margin-top: 0.9em;
+	}
+
+	li {
+		margin: 0.9em;
+	}
+
+	a {
+		@include transition(transform 0.2s);
+		display: block;
+
+		&:hover {
+			@include transform(scale(0.9))
+		}
+	}
+
+	img {
+		width: 140px;
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(900px) {
+	.app-link-list {
+		.qs-featured & {
+			@include flex-justify-content(center);
+		}
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(small) {
+	.block-link {
+		padding-left: 0 !important;
+
+        &:not(.title):not(.text) {
+            font-size: 1.4rem;
+        }
+
+		&::before {
+			display: none !important;
+		}
+	}
+
+	a.block-link {
+		&:hover .last-word .arrow,
+		&:focus .last-word .arrow {
+			@include animation(side-bounce 0.5s);
+		}
+	}
+
+	a.block-link.bounce-mobile:hover {
+		text-decoration: none !important;
+	}
+}

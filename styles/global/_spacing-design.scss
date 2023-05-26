@@ -1,0 +1,7 @@
+// Filename:	_spacing-design.scss
+// Description: override prog.com spacing for design.prog.
+
+@import "_patterns";
+.content * + .grid{
+	@include small-spacing("!important");
+}

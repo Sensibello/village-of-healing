@@ -1,0 +1,243 @@
+/* Fonts
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$ninetysixsans: "96 Sans", Arial, sans-serif;
+$ninetysixsans-icons: "96 Sans Icons";
+$ninetysixsans-condensed: "96 Sans Condensed", "96 Sans", Arial, sans-serif;
+$ninetysixsans-monospaced: "96 Sans Monospaced", Consolas, Courier New, monospace;
+
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 600;
+$font-bold: 700;
+$font-heavy: 800;
+
+/* H1 styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin h1 {
+    //54, 32
+    color: $gray-900;
+    font-size: 2.3em;
+    font-weight: $font-bold;
+    letter-spacing: normal;
+    line-height: 1.15;
+    text-transform: none;
+}
+
+@mixin h1-subhead {
+    //24, 16
+    color: $gray-700;
+    font-size: clamp(1.6rem, 1.35em, 2.4rem);
+    font-weight: $font-light;
+    line-height: 1.333;
+    text-transform: none;
+}
+
+/* H2 styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin h2 {
+    //36, 22
+    color: $gray-900;
+    font-size: 1.6em;
+    font-weight: $font-light;
+    letter-spacing: normal;
+    line-height: 1.333;
+    text-transform: none;
+}
+
+/* H3 styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin h3 {
+    //24, 18
+    color: $gray-900;
+    font-size: clamp(1.8rem, 1em, 2.4rem);
+    font-weight: $font-bold;
+    letter-spacing: normal;
+    line-height: 1.33333;
+    text-transform: none;
+}
+
+@mixin h3-subhead {
+    //18, 16
+    color: $gray-700;
+    font-size: clamp(1.6rem, 1em, 1.8rem);
+    font-weight: $font-light;
+    line-height: 1.33333;
+}
+
+/* H4 styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin h4 {
+    //18, 16
+    color: $gray-900;
+    font-family: $ninetysixsans-condensed;
+    font-weight: $font-bold;
+    line-height: 1.4;
+    font-size: clamp(1.6rem, 1em, 1.8rem);
+}
+
+/* H5 styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin h5 {
+    color: $gray-900;
+    font-size: 1.2rem;
+    font-weight: $font-bold;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    // &.sub-line {
+    //     overflow: hidden;
+    //     padding-bottom: 1.25em;
+    //     position: relative;
+
+    //     &:after {
+    //         background: $gray-700;
+    //         bottom: 0;
+    //         display: block;
+    //         content: "";
+    //         height: 1px;
+    //         position: absolute;
+    //         width: 32px;
+
+    //         .centered & {
+    //             left: 50%;
+    //             transform: translateX(-50%);
+    //         }
+    //     }
+    // }
+}
+
+@mixin h5-subhead {
+    color: $gray-700;
+    font-size: 1.3rem;
+    font-weight: $font-regular;
+}
+
+/* P styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin p {
+    //16, 14
+    color: $gray-700;
+    font-weight: $font-regular;
+    line-height: 1.65;
+    font-size: clamp(1.4rem, 0.875em, 1.6rem);
+    // font-size: 1.15em;
+
+    // @include media(sm){
+	// 	font-size: 0.775em;
+	// }
+
+    // &.small-text {
+    //     font-size: 1.4rem;
+    // }
+
+    // &.smaller-text {
+    //     font-size: 1.2rem;
+    // }
+    @include default-link;
+    a {
+        @include default-link;
+    }
+}
+
+/* DL/DD styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin dl {
+
+    dd {
+        margin: revert;
+    }
+}
+
+@mixin default-link {
+    color: $blue-700;
+    text-decoration: underline;
+
+    transition: border .2s ease-in,background-size .2s ease-in;
+    background: linear-gradient( 120deg,rgba(0,119,179,.1) 0%,rgba(0,119,179,.1) 100%) no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 0;
+    border-bottom: 1px solid #0077b3;
+    color: #0077b3;
+    padding-bottom: 0.1em;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        background-size: 100% 100%;
+        border-bottom: 0 solid rgba(0,119,179,.1);
+        color: #2d2d2d;
+    }
+}
+
+/* STRONG styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin strong {
+    color: $gray-900;
+    font-weight: $font-heavy;
+}
+
+/* EM styles
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin em {
+    font-style: italic;
+ }
+
+@mixin default-lists {
+    ol, ul {
+        @include p;
+        padding-left: 1.6rem;
+
+        & > li {
+            padding-left: 0.25em;
+
+            & + li {
+                padding-top: 0.5em;
+            }
+        }
+    }
+
+    ol {
+        list-style: decimal;
+
+        li::marker {
+            color: $gray-900;
+            font-size: 1em;
+            font-weight: $font-bold;
+            @include ninetysixsans;
+        }
+    }
+
+    ul {
+        list-style-type: disc;
+
+        li::marker {
+            color: $purple-500;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@mixin focus-state($color: $blue-700, $weight: 3px, $style: dashed){
+    body:not(.disable-focus-state) &:focus {
+        outline: -webkit-focus-ring-color none 0;
+        outline: $weight $style $color;
+        outline-offset: 0.5 * $weight;
+        @content;
+    }
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}

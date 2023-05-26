@@ -1,0 +1,266 @@
+﻿// Filename:	_grid.scss
+// Description: Styles to control the WH3 grid layout system
+@use "sass:math";
+
+@import "_patterns";
+
+
+.grid {
+	@include flexbox;
+	@include flex(0 1 auto);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+    box-sizing: border-box;
+    margin-right: math.div($margin-large, -2);
+    margin-left: math.div($margin-large, -2);
+
+	.inner {
+		box-sizing: border-box;
+	}
+	.collapse-left {
+		padding-left: 0;
+	}
+	.collapse-right {
+		padding-right: 0;
+	}
+	.grid-element {
+		padding-bottom: 0;
+	}
+}
+
+[class*="grid-"] {
+	@include flex(0 0 auto);	
+	box-sizing: border-box;
+	-webkit-box-flex: 0;
+	padding-bottom: $margin-large;
+	padding-left: $margin-large * 0.5;
+	padding-right: $margin-large * 0.5;
+
+	&:empty {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$width: math.div(100, $columns);
+@for $i from 1 through $columns {
+	$j: $i - 1;
+	$new-width: $width * $i * 1%;
+	$new-margin: $width * $j * 1%;
+
+	.grid-l#{$i} {
+		-ms-flex: 0 0 $new-width;
+		flex: 0 0 $new-width;
+		max-width: $new-width;
+
+		$padding: math.div(100%, $i);
+		$extra: math.div($margin-large, $i);
+
+		&.pl .inner {
+			padding-left: calc(#{$padding} + #{$extra});
+		}
+
+		&.pr .inner {
+			padding-right: calc(#{$padding} + #{$extra});
+		}
+	}
+	.l-l#{$j} {
+		margin-left: $new-margin;
+	}
+	.r-l#{$j} {
+		margin-right: $new-margin;
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(medium) {
+	[class*="grid-"] {
+		padding-bottom: $margin-medium;
+		padding-left: $margin-medium * 0.5;
+		padding-right: $margin-medium * 0.5;
+	}
+
+	@for $i from 1 through $columns {
+		$j: $i - 1;
+		$new-width: $width * $i * 1%;
+		$new-margin: $width * $j * 1%;
+
+		.grid-m#{$i} {
+			-ms-flex: 0 0 $new-width;
+			flex: 0 0 $new-width;
+			max-width: $new-width;
+
+			$padding: math.div(100%, $i);
+			$extra: math.div($margin-medium, $i);
+
+			&.pl .inner {
+				padding-left: calc(#{$padding} + #{$extra});
+			}
+
+			&.pr .inner {
+				padding-right: calc(#{$padding} + #{$extra});
+			}
+		}
+
+		.l-m#{$j} {
+			margin-left: $new-margin;
+		}
+
+		.r-m#{$j} {
+			margin-right: $new-margin;
+		}
+	}
+
+	.grid {
+		margin-right: math.div($margin-medium, -2);
+		margin-left: math.div($margin-medium, -2);
+
+		.pl-m-reset .inner {
+			padding-left: 0;
+		}
+
+		.pr-m-reset .inner {
+			padding-right: 0;
+		}
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(small) {
+	[class*="grid-"] {
+		padding-bottom: $margin-small;
+		padding-left: $margin-small * 0.5;
+		padding-right: $margin-small * 0.5;
+	}
+
+	@for $i from 1 through $columns {
+		$j: $i - 1;
+		$new-width: $width * $i * 1%;
+		$new-margin: $width * $j * 1%;
+
+		.grid-s#{$i} {
+			-ms-flex: 0 0 $new-width;
+			flex: 0 0 $new-width;
+			max-width: $new-width;
+
+			$padding: math.div(100%, $i);
+			$extra: math.div($margin-small, $i);
+
+			&.pl .inner {
+				padding-left: calc(#{$padding} + #{$extra});
+			}
+
+			&.pr .inner {
+				padding-right: calc(#{$padding} + #{$extra});
+			}
+		}
+
+		.l-s#{$j} {
+			margin-left: $new-margin;
+		}
+
+		.r-s#{$j} {
+			margin-right: $new-margin;
+		}
+	}
+
+	.grid {
+		margin-right: math.div($margin-small, -2);
+		margin-left: math.div($margin-small, -2);
+
+		.pl-s-reset .inner {
+			padding-left: 0;
+		}
+
+		.pr-s-reset .inner {
+			padding-right: 0;
+		}
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(tiny) {
+	[class*="grid-"] {
+		padding-bottom: $margin-tiny;
+		padding-left: $margin-tiny * 0.5;
+		padding-right: $margin-tiny * 0.5;
+	}
+
+	@for $i from 1 through $columns {
+		$j: $i - 1;
+		$new-width: $width * $i * 1%;
+		$new-margin: $width * $j * 1%;
+
+		.grid-t#{$i} {
+			-ms-flex: 0 0 $new-width;
+			flex: 0 0 $new-width;
+			max-width: $new-width;
+
+			$padding: math.div(100%, $i);
+			$extra: math.div($margin-tiny, $i);
+
+			&.pl .inner {
+				padding-left: calc(#{$padding} + #{$extra});
+			}
+
+			&.pr .inner {
+				padding-right: calc(#{$padding} + #{$extra});
+			}
+		}
+
+		.l-t#{$j} {
+			margin-left: $new-margin;
+		}
+
+		.r-t#{$j} {
+			margin-right: $new-margin;
+		}
+	}
+
+	.grid {
+		margin-right: math.div($margin-tiny, -2);
+		margin-left: math.div($margin-tiny, -2);
+
+		.pl-t-reset .inner {
+			padding-left: 0;
+		}
+
+		.pr-t-reset .inner {
+			padding-right: 0;
+		}
+	}
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#lockedgrid {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	pointer-events: none;
+	z-index: 100;
+
+	.wrap {
+		height: 100%;
+	}
+	.grid {
+		height: 100%;
+		margin-top: 0 !important;
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+	}
+	.grid [class*="grid-"] {
+		padding-bottom: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.grid .inner {
+		background: rgba($gray-700, 0.1) !important;
+		height: 100%;
+	}
+}

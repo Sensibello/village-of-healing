@@ -1,0 +1,44 @@
+﻿/* Filename:	_grid-content.scss */
+/* Description: Extend/reconfigure grid to work inside .content.grid class (10col) */
+@use "sass:math";
+
+@import "_patterns";
+
+//Let's create a new 10 column grid context for inside .content.
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.content {
+	//mq forces this to ONLY apply to large size so it doesn't break cascade.
+	@media screen and (min-width: $size-medium) {
+		$width: math.div(100, $columns - 2);
+		@for $i from 1 through ($columns - 2) {
+			$j: $i - 1;
+			$new-width: $width * $i * 1%;
+			$new-margin: $width * $j * 1%;
+
+			.grid-l#{$i} {
+				flex: 0 0 $new-width;
+				max-width: $new-width;
+
+				$padding: math.div(100%, $i);
+				$extra: math.div($margin-large, $i);
+
+				&.pl .inner {
+					padding-left: calc(#{$padding} + #{$extra});
+				}
+
+				&.pr .inner {
+					padding-right: calc(#{$padding} + #{$extra});
+				}
+
+			}
+			.l-l#{$j} {
+				margin-left: $new-margin;
+			}
+			.r-l#{$j} {
+				margin-right: $new-margin;
+			}
+		}
+	}
+}
+

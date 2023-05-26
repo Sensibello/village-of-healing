@@ -1,0 +1,97 @@
+//Breakpoint values - mobile first
+// $size-xxs: 0px;
+// $size-xs: 420px;
+// $size-sm: 576px;
+// $size-md: 768px;
+// $size-lg: 992px;
+// $size-xl: 1200px;
+// $size-xxl: 1500px;
+
+$breakpoints: (
+	//Breakpoint xxs skipped as its base 0
+	xs: 420px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1500px
+) !default;
+
+// Grid columns & margins
+$columns: 12;
+$margin-xxs: 16px;
+$margin-xs: 16px;
+$margin-sm: 16px;
+$margin-md: 16px;
+$margin-lg: 16px;
+$margin-xl: 16px;
+$margin-xxl: 16px;
+
+//Breakpoint Mixin
+@mixin media($breakpoint, $map: $breakpoints) {
+	@if type-of($map) ==map {
+		@if map-has-key($map, $breakpoint) {
+			@media (min-width: #{map-get($map, $breakpoint)}) {
+				@content;
+			}
+		} @else {
+			//if we want to pass in a non-specified breakpoint value
+			@media (min-width: #{$breakpoint}) {
+				@content;
+			}
+			//@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. Please make sure it is defined in breakpoints map.";
+		}
+	} @else {
+		@warn "Unfortunately, the map `#{$map}` isn't defined or is invalid.";
+	}
+}
+
+/* 
+	* Hack mobile-first mixin
+	* @param {String} $breakpoint - Breakpoint key in Sass map
+	*/
+
+@mixin media-max($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	} @else {
+		//if we want to pass in a non-specified breakpoint value
+		@media (max-width: $breakpoint) {
+			@content;
+		}
+	}
+}
+
+/*
+	* Function to get next map item
+	* @author Simon Koch
+	*
+	* @param {Map} $map - Sass list map
+	* @param {String} $key - List map key
+	*
+	*/
+
+@function get-next($key, $map) {
+	@if map-has-key($map, $key) {
+		$i: 0;
+		$key-index: false;
+
+		@each $map-key, $map-value in $map {
+			$i: $i + 1;
+
+			@if $map-key==$key {
+				$key-index: $i;
+			}
+
+			@if $i==$key-index + 1 {
+				@return $map-value;
+			}
+
+			@if $i==length($map) {
+				@return $map-value;
+			}
+		}
+	}
+}

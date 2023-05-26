@@ -1,0 +1,148 @@
+// Filename: _wraps.scss
+// Description: Contains the styles for the wrap containers and associated side gutters
+@use "sass:math";
+@use "sass:list";
+
+@import "_patterns";
+
+
+.content,
+.wrap,
+.wide-wrap {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter-large;
+    padding-right: $gutter-large;
+}
+
+.content {
+    max-width: math.div(10, 12) * $content-wrap;
+    padding-left: $gutter-large - $margin-large * 0.5 - 3px;
+    padding-right: $gutter-large - $margin-large * 0.5 - 3px;
+    width: math.div(10, 12) * 100%;
+
+    #site &.standard-links, 
+    #site & .standard-links {
+        a {
+            background: none;
+            border: none;
+            text-decoration: underline;
+
+            &:hover {
+                color: $blue-700;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.is-homepage {
+        width: auto;
+    }
+
+    &:not(.is-homepage):not(.jump-links) {
+        @include text-links;
+    }
+
+
+
+    #main > &:first-child {
+        margin-top: 5rem;
+    }
+}
+
+.wrap {
+    max-width: $content-wrap;
+}
+
+.wide-wrap {
+    max-width: $wide-wrap;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@media screen and (min-width: $size-small) {
+    .content.is-homepage {
+        max-width: none;
+        padding-left: 0;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(medium) {
+	.content,
+	.wrap,
+	.wide-wrap {
+		padding-left: $gutter-medium;
+		padding-right: $gutter-medium;
+	}
+
+	.content {
+		max-width: 100%;
+		width: 100%;		
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(small) {
+    .content,
+    .wrap,
+    .wide-wrap {
+        padding-left: $gutter-small;
+        padding-right: $gutter-small;
+    }
+
+    .content,
+    .wrap {
+        max-width: $content-wrap-small;
+    }
+
+	.content {
+		#main > &:first-child {
+			margin-top: 4rem;
+		}
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(tiny) {
+	.content,
+	.wrap,
+	.wide-wrap {
+		padding-left: $gutter-tiny;
+		padding-right: $gutter-tiny;
+	}
+
+	.content,
+	.wrap {
+		max-width: $content-wrap-tiny;
+	}
+
+	.content {
+		#main > &:first-child {
+			margin-top: 3rem;
+		}
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(xt) {
+    .content,
+    .wrap,
+    .wide-wrap {
+        padding-left: $gutter-xt;
+        padding-right: $gutter-xt;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(xxt) {
+    .content,
+    .wrap,
+    .wide-wrap {
+        padding-left: $gutter-xxt;
+        padding-right: $gutter-xxt;
+    }
+}
+
+

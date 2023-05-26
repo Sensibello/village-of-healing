@@ -1,0 +1,1129 @@
+// Filename:	_patterns.scss
+// Description: All SCSS-based variables, mixins, etc. This file is required by nearly all modules.
+@use "sass:math";
+@use "sass:list";
+
+/* Colors
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$white: #fff;
+$black: #2d2d2d;
+$gray: #767676;
+$lightest-gray: #eee;
+$light-gray: #f3f3f3;
+
+$prog-blue: #2d95e5;
+$blue-100: #f3f9fc;
+$blue-300: #8fd8f2;
+$blue-500: #4ebee5;
+$blue-700: #0077B3;
+$blue-900: #2862a4;
+
+$gray-100: #f8f8f8;
+$gray-300: #ccc;
+$gray-500: #a6a6a6;
+$gray-700: #707070;
+$gray-900: #2d2d2d;
+
+$green-100: #effbf7;
+$green-300: #bdefe6;
+$green-500: #7ee0ca;
+$green-700: #08caa9;
+$green-900: #067462;
+
+$orange-100: #fef5ed;
+$orange-300: #ffcc8f;
+$orange-500: #ffa452;
+$orange-700: #ff8a39;
+$orange-900: #c05711;
+
+$purple-100: #f5f1f9;
+$purple-300: #e4b9e4;
+$purple-500: #c973c9;
+$purple-700: #bd4ec4;
+$purple-900: #86318c;
+
+$red-100: #fceff2;
+$red-300: #ffcfde;
+$red-500: #ff527b;
+$red-700: #d41659;
+$red-900: #a11b58;
+
+$steel-blue-100: #f4f9fa;
+$steel-blue-300: #d1e2e5;
+$steel-blue-500: #91b0bf;
+$steel-blue-700: #405e7c;
+$steel-blue-900: #0a3360;
+
+$deep-blue-900: #0b3b60;
+
+
+$yellow-100: #fff8e5;
+$yellow-300: #ffe694;
+$yellow-500: #ffd039;
+$yellow-700: #efab00;
+$yellow-900: #a86800;
+
+
+
+/* Fonts
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$ninetysixsans: "96 Sans", Arial, sans-serif;
+$ninetysixsans-icons: "96 Sans Icons";
+$ninetysixsans-condensed: "96 Sans Condensed", "96 Sans", Arial, sans-serif;
+$ninetysixsans-monospaced: "96 Sans Monospaced", Consolas, Courier New, monospace;
+
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 600;
+$font-bold: 700;
+$font-heavy: 800;
+
+/* Links
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+p {
+    a {
+        color: #2d2d2d;
+        position: relative;
+        // font-size: 1.3rem;
+        text-transform: none!important;
+        transition: border .2s ease-in,background-size .2s ease-in;
+        background: linear-gradient( 120deg,rgba(0,119,179,.1) 0%,rgba(0,119,179,.1) 100%) no-repeat;
+        background-position: 0 100%;
+        background-size: 100% 0;
+        border-bottom: 1px solid #0077b3;
+      
+        padding-bottom: 0.1em;
+        text-decoration: none;
+    
+        &:hover {
+            background-size: 100% 100%;
+            border-bottom: 0 solid rgba(0,119,179,.1);
+            color: #2d2d2d;
+        }
+      }
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    background-color: #007cb9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-family: '96sans-medium', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+}
+
+
+/* Layout
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+$flyout-transition: 0.35s;
+$flyout-border: 15px;
+
+// Grid classes
+$columns: 12;
+$margin-count: $columns - 1;
+$margin-large: 16px;
+$margin-medium: 14px;
+$margin-small: 12px;
+$margin-tiny: 10px;
+
+// Container widths
+$site-wrap: 1700px;
+$wide-wrap: 1500px;
+$content-wrap: 1270px;
+$content-wrap-small: 600px;
+$content-wrap-tiny: 420px;
+
+// Container gutters
+$gutter-large: 75px;
+$gutter-medium: 50px;
+$gutter-small: 40px;
+$gutter-tiny: 30px;
+$gutter-xt: 25px;
+$gutter-xxt: 20px;
+
+// Breakpoint values
+$size-medium: 970px;
+$size-small: 780px;
+$size-tiny: 670px;
+$size-xt: 400px;
+$size-xxt: 350px;
+
+//this could be refactored to
+//marging-left: -1 * $gutter-#{$size}; margin-right: -1 * $gutter-#{$size}
+@mixin collapse-gutters($size) {
+    @if($size == "medium") {
+        margin-left: -1 * $gutter-medium;
+        margin-right: -1 * $gutter-medium;
+    }
+    @else if($size == "small") {
+        margin-left: -1 * $gutter-small;
+        margin-right: -1 * $gutter-small;
+    }
+    @else if($size == "tiny") {
+        margin-left: -1 * $gutter-tiny;
+        margin-right: -1 * $gutter-tiny;
+    }
+    @else if($size == "xt") {
+        margin-left: -1 * $gutter-xt;
+        margin-right: -1 * $gutter-xt;
+    }
+    @else if($size == "xxt") {
+        margin-left: -1 * $gutter-xxt;
+        margin-right: -1 * $gutter-xxt;
+    }
+}
+
+
+//this could be refactored to
+// max-width: $size-#{$width}
+@mixin size($width) {
+    $targetWidth: $width;
+
+    @if($width == "medium") {
+        $targetWidth: $size-medium;
+    }
+    @else if($width == "small") {
+        $targetWidth: $size-small;
+    }
+    @else if($width == "tiny") {
+        $targetWidth: $size-tiny;
+    }
+    @else if($width == "xt") {
+        $targetWidth: $size-xt;
+    }
+    @else if($width == "xxt") {
+        $targetWidth: $size-xxt;
+    }
+
+    @media only screen and (max-width: $targetWidth) {
+        @content;
+    }
+}
+
+@mixin spacing($tag1, $tag2) {
+    $tagStyle: "h1", "h2", "h3", "h4", "h5", "p";
+    $tag1out: null;
+    $tag2out: null;
+
+    $tagCompile: "";
+
+    $tag1out: $tag1;
+    $tag2out: $tag2;
+
+    @if(index($tagStyle, $tag1)) {
+        $tag1out: append($tag1out, "."+$tag1+"-style");
+    }
+
+    @if(index($tagStyle, $tag2)) {
+        $tag2out: append($tag2out, "."+$tag2+"-style");
+    }
+
+    @each $tempTag1 in $tag1out {
+        @each $tempTag2 in $tag2out {
+            $selector: null;
+
+            @if $tempTag1 != nth($tag1out, length($tag1out)) and $tempTag2 != nth($tag2out, length($tag2out)) {
+                $selector: #{$tempTag1} unquote('+') #{$tempTag2} unquote(',');
+            }
+            @else {
+                $selector: #{$tempTag1} unquote('+') #{$tempTag2} unquote(',');
+            }
+
+            $tagCompile: append($tagCompile, $selector);
+        }
+    }
+
+    #{$tagCompile} {
+        @content;
+    }
+}
+
+// 120 - 100 - 80
+@mixin module-spacing($important: "") {
+    margin-top: 60px#{$important};
+    padding-top: 60px#{$important};
+
+    @include size(medium) {
+        margin-top: 50px#{$important};
+        padding-top: 50px#{$important};
+    }
+
+    @include size(xt) {
+        margin-top: 40px#{$important};
+        padding-top: 40px#{$important};
+    }
+}
+
+// 80 - 66 - 54
+@mixin large-spacing($important: "") {
+    margin-top: 40px#{$important};
+    padding-top: 40px#{$important};
+
+    @include size(medium) {
+        margin-top: 33px#{$important};
+        padding-top: 33px#{$important};
+    }
+
+    @include size(xt) {
+        margin-top: 27px#{$important};
+        padding-top: 27px#{$important};
+    }
+}
+
+// 64 - 54 - 42
+@mixin medium-spacing($important: "") {
+    margin-top: 32px#{$important};
+    padding-top: 32px#{$important};
+
+    @include size(medium) {
+        margin-top: 27px#{$important};
+        padding-top: 27px#{$important};
+    }
+
+    @include size(xt) {
+        margin-top: 21px#{$important};
+        padding-top: 21px#{$important};
+    }
+}
+
+// 32 - 26 - 22
+@mixin small-spacing($important: "") {
+    margin-top: 24px#{$important};
+    padding-top: 24px#{$important};
+
+    @include size(medium) {
+        margin-top: 13px#{$important};
+        padding-top: 13px#{$important};
+    }
+
+    @include size(xt) {
+        margin-top: 11px#{$important};
+        padding-top: 11px#{$important};
+    }
+}
+
+
+
+/* Flex Mixins
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex($flex...) {
+    -ms-flex: $flex;
+    flex: $flex;
+}
+
+@mixin flex-align-items($align) {
+    -ms-flex-align: $align;
+    align-items: $align;
+}
+
+@mixin flex-align-self($align) {
+    -ms-flex-item-align: $align;
+    align-self: $align;
+}
+
+@mixin flex-direction($direction) {
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+@mixin flex-justify-content($justify) {
+    @if $justify=="space-between" {
+        -ms-flex-pack: justify;
+    }
+    @else if $justify=="flex-end" {
+        -ms-flex-pack: end;
+    }
+    @else if $justify=="flex-start" {
+        -ms-flex-pack: start;
+    }
+    @else {
+        -ms-flex-pack: $justify;
+    }
+
+    justify-content: $justify;
+}
+
+@mixin flex-wrap($wrap) {
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin flex-order($order) {
+    -ms-flex-order: $order;
+    order: $order;
+}
+
+@mixin flex-grow($grow) {
+    -ms-flex-grow: $grow;
+    flex-grow: $grow;
+}
+
+@mixin flex-shrink($shrink) {
+    -ms-flex-shrink: $shrink;
+    flex-shrink: $shrink;
+}
+
+@mixin flex-flow($flow) {
+    -ms-flex-flow: $flow;
+    flex-flow: $flow;
+}
+
+@mixin flex-basis($basis) {
+    -ms-flex-basis: $basis;
+    flex-basis: $basis;
+}
+
+
+
+/* Links
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@mixin link-underline($color: $blue-700) {
+    $link-bg-color: rgba($color, 0.1);
+    @include transition(border 0.2s ease-in, background-size 0.2s ease-in);
+    background: linear-gradient(120deg, $link-bg-color 0%, $link-bg-color 100%) no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 0;
+    border-bottom: 1px solid $color;
+    color: $color;
+    padding-bottom: 0.1em;
+
+    &:hover,
+    &:focus {
+        background-size: 100% 100%;
+        border-bottom-color: $link-bg-color;
+        color: $gray-900;
+    }
+
+    &:focus {
+        @include focus;
+    }
+}
+
+@mixin link-underline-plain($color: $blue-700) {
+    @include transition(none);
+    background: none;
+    border: none;
+    color: $color;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        background: none;
+        border: none;
+        color: $color;
+        text-decoration: none;
+    }
+
+    &:focus {
+        @include focus;
+    }
+}
+
+@mixin link-underline-reverse($color: $blue-700) {
+    @include transition(background-size 0.125s ease-in);
+    background-size: 100% 0;
+
+    &:hover,
+    &:focus {
+        $link-bg-color: rgba($color, 0.1);
+        background: linear-gradient(120deg, $link-bg-color 0%, $link-bg-color 100%) no-repeat;
+        background-position: 0 100%;
+        background-size: 100% 100%;
+        border-bottom: 2px solid $color;
+        color: $gray-900;
+        padding-bottom: 0.1em;
+    }
+
+    &:focus {
+        @include focus;
+    }
+}
+
+@mixin text-links {
+	// a:not(.learn-link):not(.block-link):not(.primary-button):not(.secondary-button):not(.tertiary-button):not(.disclosure-anchor):not(.tooltip-close):not(.list-link):not(.app-link):not(.button-quiet):not(.breadcrumb-link)  {
+	// 	@include link-underline;
+	// 	text-decoration: none;
+	// }
+
+	// &:focus {
+	// 	@include focus;
+	// }	
+}
+
+
+/* Animations
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin animation($properties) {
+    -webkit-animation: $properties;
+    -moz-animation: $properties;
+    -o-animation: $properties;
+    animation: $properties;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @-o-keyframes#{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation-delay($delay) {
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
+}
+
+/* Other Mixins
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@mixin background-image-retina($file, $type, $width, $height) {
+    background-image: url($file + '.' + $type);
+    background-size: $width $height;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        & {
+            background-image: url($file + '@2x.' + $type);
+            background-size: $width $height;
+        }
+    }
+}
+
+@mixin background-image-retina-no-size($file, $type) {
+    background-image: url($file + '.' + $type);
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        & {
+            background-image: url($file + '@2x.' + $type);
+        }
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin focus($weight: 3px, $style: dashed, $color: $blue-700) {
+    body:not(.disable-focus-state) #site & {
+        outline: -webkit-focus-ring-color none 0;
+        outline: $weight $style $color;
+        outline-offset: -1 * $weight;
+    }
+}
+
+@mixin gradient-angle($left, $right) {
+    background: $left;
+    background: -moz-linear-gradient(65deg,$left 0%,$right 100%);
+    background: -webkit-linear-gradient(65deg,$left 0%,$right 100%);
+    background: linear-gradient(25deg,$left 0%,$right 100%);
+}
+
+@mixin gradient-horizontal($left, $right) {
+    background: $left;
+    background: -moz-linear-gradient(left, $left 0%, $right 100%);
+    background: -webkit-linear-gradient(left, $left 0%, $right 100%);
+    background: linear-gradient(to right, $left 0%, $right 100%);
+}
+
+@mixin gradient-vertical-three($top, $bottom) {
+    background: $top;
+    background: -webkit-linear-gradient(top, $top 0%, $top 50%, $bottom 100%);
+    background: -moz-linear-gradient(top, $top 0%, $top 50%, $bottom 100%);
+    background: linear-gradient(to bottom, $top 0%, $top 50%, $bottom 100%);
+}
+
+@mixin gradient-vertical($top, $bottom) {
+    background: $bottom;
+    background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+    background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+    background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+}
+
+@mixin skew($direction: "forward", $more-transform: null) {
+    @if($direction == "forward") {
+        @include transform(skewX(-25deg) $more-transform);
+    }
+    @else {
+        @include transform(skewX(25deg) $more-transform);
+    }
+}
+
+@mixin transform($transform...) {
+    transform: $transform;
+}
+
+@mixin transition($transition...) {
+    transition: $transition;
+}
+
+@mixin shadow-box {
+    background: #fff;
+    border: 1px solid $steel-blue-300;
+    border-radius: 5px;
+    box-shadow: 0 4px 0px 0px rgba($steel-blue-300, 0.35);
+    box-sizing: border-box;
+}
+
+@mixin shadow-box-animation {
+    @include transition(box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out);
+
+    .no-touch &:focus,
+    .no-touch &:hover {
+        background-color: $blue-100;
+        box-shadow: none;
+    }
+
+    &:focus {
+        @include focus;
+    }
+}
+/* Color Themes
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+$themes: "blue", "green", "orange", "purple", "red", "yellow", "gray";
+$colors-100: $blue-100, $green-100, $orange-100, $purple-100, $red-100, $yellow-100, $gray-100;
+$colors-300: $blue-300, $green-300, $orange-300, $purple-300, $red-300, $yellow-300, $gray-300;
+$colors-500: $blue-500, $green-500, $orange-500, $purple-500, $red-500, $yellow-500, $gray-500;
+$colors-700: $blue-700, $green-700, $orange-700, $purple-700, $red-700, $yellow-700, $gray-700;
+$colors-900: $blue-900, $green-900, $orange-900, $purple-900, $red-900, $yellow-900, $gray-900;
+
+$themes-gradients-name: "blue-red", "blue-green", "red-purple", "purple-blue", "red-orange", "purple-red", "blue-blue";
+$themes-gradients-1: $blue-300, $blue-300, $red-300, $purple-300, $red-300, $purple-300, $blue-300;
+$themes-gradients-2: $red-300, $green-300, $purple-300, $blue-300, $orange-300, $red-300, $blue-300;
+$themes-gradients-3: $blue-500, $blue-500, $red-500, $purple-500, $red-500, $purple-500, $blue-500;
+$themes-gradients-4: $red-500, $green-500, $purple-500, $blue-500, $orange-500, $red-500, $blue-500;
+
+@mixin color-theme-background($color, $source: "self") {
+    background-color: nth($color, 1);
+
+    @for $i from 2 through length($themes) {
+        @if($source == "self") {
+            @at-root .theme-#{nth($themes, $i)}#{&} {
+                background: nth($color, $i);
+            }
+        }
+        @else {
+            .theme-#{nth($themes, $i)} & {
+                background: nth($color, $i);
+            }
+        }
+    }
+}
+
+@mixin color-theme-border($color, $modifier, $source: "self") {
+    border: #{$modifier} nth($color, 1);
+
+    @for $i from 2 through length($themes) {
+        @if($source == "self") {
+            @at-root .theme-#{nth($themes, $i)}#{&} {
+                border: #{$modifier} nth($color, $i);
+            }
+        }
+        @else {
+            .theme-#{nth($themes, $i)} & {
+                border: #{$modifier} nth($color, $i);
+            }
+        }
+    }
+}
+
+@mixin color-theme-box-shadow($color, $modifier, $source: "self") {
+    box-shadow: #{$modifier} nth($color, 1);
+
+    @for $i from 2 through length($themes) {
+        @if($source == "self") {
+            @at-root .theme-#{nth($themes, $i)}#{&} {
+                box-shadow: #{$modifier} nth($color, $i);
+            }
+        }
+        @else {
+            .theme-#{nth($themes, $i)} & {
+                box-shadow: #{$modifier} nth($color, $i);
+            }
+        }
+    }
+}
+
+
+@mixin dot-background {
+    background: url("/Content/images/DomainProgressive/wh3/base/icons/dot-pattern.svg") center;
+
+    @media only screen and (max-width: 700px) {
+        background-image: radial-gradient($blue-300 15%, transparent 16%), radial-gradient($blue-300 15%, transparent 16%);
+        background-size: 10px 10px;
+        background-position: 0 0, 5px 5px;
+    }
+}
+
+
+@mixin gradient-theme-background-300($key: "null") {
+    @if($key == "null") {
+        @include gradient-angle(nth($themes-gradients-1, 1), nth($themes-gradients-2, 1));
+
+        @for $i from 2 through length($themes-gradients-name) {
+            @at-root .gradient-#{nth($themes-gradients-name, $i)}#{&} {
+                @include gradient-angle(nth($themes-gradients-1, $i), nth($themes-gradients-2, $i));
+            }
+        }
+    }
+    @else {
+        $val: 1;
+
+        @for $i from 1 through length($themes-gradients-name) {
+            @if(nth($themes-gradients-name, $i) == $key) {
+                $val: $i;
+            }
+        }
+
+        @at-root #{&} {
+            @include gradient-angle(nth($themes-gradients-1, $val), nth($themes-gradients-2, $val));
+        }
+    }
+}
+
+@mixin gradient-underline-300($key) {
+    $val: 1;
+
+    @for $i from 1 through length($themes-gradients-name) {
+        @if(nth($themes-gradients-name, $i) == $key) {
+            $val: $i;
+        }
+    }
+
+    @at-root #{&} {
+        @include gradient-angle(nth($themes-gradients-1, $val), nth($themes-gradients-2, $val));
+    }
+}
+
+@mixin gradient-underline-500($key) {
+    $val: 1;
+
+    @for $i from 1 through length($themes-gradients-name) {
+        @if(nth($themes-gradients-name, $i) == $key) {
+            $val: $i;
+        }
+    }
+
+    @at-root #{&} {
+        @include gradient-angle(nth($themes-gradients-3, $val), nth($themes-gradients-4, $val));
+    }
+}
+
+@mixin color-theme-gradient-angle($left-color, $right-color, $source: "self") {
+    @include gradient-angle(nth($left-color, 1), nth($right-color, 1));
+
+    @for $i from 2 through length($themes) {
+        @if($source == "self") {
+            @at-root .theme-#{nth($themes, $i)}#{&} {
+                @include gradient-angle(nth($left-color, $i), nth($right-color, $i));
+            }
+        }
+        @else {
+            .theme-#{nth($themes, $i)} & {
+                @include gradient-angle(nth($left-color, $i), nth($right-color, $i));
+            }
+        }
+    }
+}
+
+@mixin color-theme-gradient-horizontal($left-color, $right-color, $source: "self") {
+    @include gradient-horizontal(nth($left-color, 1), nth($right-color, 1));
+
+    @for $i from 2 through length($themes) {
+        @if($source == "self") {
+            @at-root .theme-#{nth($themes, $i)}#{&} {
+                @include gradient-horizontal(nth($left-color, $i), nth($right-color, $i));
+            }
+        }
+        @else {
+            .theme-#{nth($themes, $i)} & {
+                @include gradient-horizontal(nth($left-color, $i), nth($right-color, $i));
+            }
+        }
+    }
+}
+
+@function aspect-ratio($width, $height) {
+    @return math.div($height, $width) * 100%;
+}
+
+@mixin common-button {
+    @include transition(background 0.3s ease-in-out);
+    border: 1px solid $blue-700;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: $ninetysixsans;
+    font-size: 2rem;
+    font-weight: $font-bold;
+    line-height: 1;
+    padding: 1.125em 1.333em 1.375em 1.4em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@mixin primary-button {
+    @include common-button;
+
+    @include size(medium) {
+        font-size: 1.8rem;
+    }
+
+    @include size(small) {
+        font-size: 1.6rem;
+    }
+
+    @include size(tiny) {
+        font-size: 1.4rem;
+    }
+
+    background-color: $blue-700;
+    color: white;
+
+    &:hover,
+    &:focus {
+        background-color: $blue-900;
+        color: white;
+    }
+
+    body:not(.disable-focus-state) &:focus {
+        //this is the @include focus(3px, dashed, white), but needed to be duplicated to put an !important to override accessibility css
+        outline: -webkit-focus-ring-color none 0;
+        outline: 3px dashed white !important;
+    }
+
+    .is-microsoft:not(.disable-focus-state) &:focus {
+        outline: 3px dashed $blue-900 !important;
+        outline-offset: 0 !important;
+    }
+}
+
+@mixin secondary-button {
+    @include color-theme-box-shadow($colors-500, 8px -8px 0 0, parent);
+    @include transition(box-shadow 0.3s ease-in-out);
+
+    @include size(xt) {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    @include size(tiny) {
+        font-size: 1.5rem;
+    }
+
+    @include size(small) {
+        font-size: 1.6rem;
+        min-width: 100%;
+    }
+
+    @include size(medium) {
+        font-size: 1.8rem;
+        min-width: 0;
+    }
+
+    background-color: white;
+    border: 1px solid $gray-900;
+    box-sizing: border-box;
+    color: $gray-900;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $ninetysixsans;
+    font-size: 2rem;
+    font-weight: $font-bold;
+    line-height: 1;
+    min-width: 340px;
+    padding: 1.12em 3.6em 1.35em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+
+    &::after {
+        @include color-theme-background($colors-300, parent);
+        @include transition(opacity 0.3s ease-in-out);
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+        @include color-theme-box-shadow($colors-300, 0 0 0 0, parent);
+        background-color: white;
+        cursor: pointer;
+
+        &::after {
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+    }
+
+    &:focus {
+        @include focus;
+    }
+}
+
+@mixin tertiary-button {
+    @include common-button;
+    background: white;
+    color: $blue-700;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        background: $blue-100;
+    }
+
+    &:focus {
+        @include focus;
+    }
+}
+
+@mixin qs-text-input-container {
+    @include flex-align-items(flex-end);
+    @include flexbox;
+    position: relative;
+    margin-right: 48px;
+
+    &:before {
+        color: $gray-900;
+        content: "Location";
+        display: block;
+        font-size: 1.2rem;
+        font-weight: $font-bold;
+        left: 0;
+        letter-spacing: 0.5px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 0;
+    }
+
+    label {
+        color: $gray-700;
+        font-size: 1.8rem;
+        position: absolute;
+        z-index: 1;
+    }
+
+    input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid $gray-700;
+        color: $gray-900;
+        padding: 0.5em 0;
+        position: relative;
+        font-size: 1.8rem;
+        font-family: $ninetysixsans;
+        z-index: 2;
+    }
+
+    &.hideLabel label {
+        display: none;
+    }
+
+    @include size(small) {
+        label {
+            text-align: center;
+        }
+
+        input {
+            text-align: center;
+        }
+    }
+
+    @include size(730px) {
+        label,
+        input {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+
+//High Contrast Mixins
+@mixin high-contrast-active {
+    /* Targets displays using any of Windows High Contrast Mode themes: */
+    @media screen and (-ms-high-contrast: active) {
+        @content;
+    }
+}
+
+@mixin high-contrast-white-on-black {
+    /* Targets displays using the Windows "High Contrast Black" theme: */
+    @media screen and (-ms-high-contrast: white-on-black) {
+        @content;
+    }
+}
+
+@mixin high-contrast-black-on-white {
+    /* Targets displays using the Windows "High Contrast White" theme: */
+    @media screen and (-ms-high-contrast: black-on-white) {
+        @content;
+    }
+}
+
+
+//Is IE Mixins
+@mixin is-ie11 {
+	body[data-version="msie 11"] {
+		@content;
+	}
+}
+
+@mixin is-microsoft {
+	body.is-microsoft {
+		@content;
+	}
+}
+
+
+
+//Animations
+@mixin side-bounce($x: '6px', $y: '0', $append: '') {
+	@if $y == '0' {
+		@keyframes side-bounce#{$append} {
+			0%,
+			100% {
+				transform: translateX(0);
+			}
+
+			50% {
+				transform: translateX(6px);
+			}
+		}
+	} @else {
+		@keyframes side-bounce#{$append} {
+			0%,
+			100% {
+				transform: translate(0, $y);
+			}
+
+			50% {
+				transform: translate($x, $y);
+			}
+		}
+	}
+}
+
+//Accessibility mixins
+@mixin sr-only {
+	border: 0;
+	clip: rect(0 0 0 0);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+//Link style mixins
+@mixin nav-links {
+	color: $gray-900;
+	font-weight: $font-bold;
+	font-size: 1.3rem;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+@mixin blue-underline-link {
+	color: $blue-700;
+	font-size: 1.4rem;
+	font-weight: $font-heavy;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin expanding-underline {
+	color: $gray-900;
+	font-weight: $font-bold;
+	font-size: 1.3rem;
+	text-decoration: none;
+
+	&::after {
+		background-color: $gray-700;
+		content: '';
+		display: block;
+		height: 1px;
+		left: 50%;
+		opacity: 0;
+		position: absolute;
+		right: 50%;
+		top: 70%;
+		transition: all 0.3s;
+	}
+
+	&:hover::after,
+	&:focus::after {
+		left: 14px;
+		opacity: 1;
+		right: 14px;
+	}
+}
+
+//Text modifications
+@mixin small-caps {
+	color: $gray-900;
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+@mixin disclosures {
+	color: $gray-900;
+	font-size: 1.2rem;
+}

@@ -1,0 +1,22 @@
+/* Filename: global.scss */
+
+/* Spacing, wraps, patterns*/ 
+@import "_patterns";
+@import "_reset";
+@import "_wraps";
+@import "_spacing";
+@import "_spacing-design";
+@import "_breakpoints";
+
+/* Grid */ 
+@import "_grid-content";
+@import "_grid";
+
+
+/* Liks, lists, text */ 
+@import "_links";
+@import "_lists";
+@import "_style";
+@import "_table";
+@import "_text";
+

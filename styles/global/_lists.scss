@@ -1,0 +1,181 @@
+// Filename:	_lists.scss
+// Description: Lists styling (bullets, numbered, etc)
+@import "_patterns";
+
+
+/* Lists
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.bullets, .numbers {
+    li {
+        color: $gray-700;
+        font-size: 1.6rem;
+        font-weight: $font-regular;
+        padding-left: 1.25em;
+        position: relative;
+
+        &::before {
+            margin-top: 0.5rem;
+            left: 0.5rem;
+            position: absolute;
+        }
+    }
+
+
+    // li +  li {
+    //     margin-top: 1.5em;
+    // }
+}
+
+.bullets {
+    margin-top: 1.5rem;
+    // First level of bullets
+    li {
+        padding-top: 5px;
+        break-inside: avoid;
+        &::before {
+            background: white;
+            border: 2px solid $blue-700;
+            border-radius: 100%;
+            content: "";
+            height: 2px;
+            top: 0.8em;
+            width: 2px;
+        }
+    }
+    // Second level of bullets
+    li li::before {
+        background: $blue-700;
+        border: none;
+        border-radius: 0;
+        height: 5px;
+        top: 0.7em;
+        width: 5px;
+    }
+}
+
+.numbers {
+    counter-reset: counter;
+    // First level of numbers
+    li {
+        counter-increment: counter;
+
+        & > ol {
+            counter-reset: inner-counter;
+
+            & > li {
+                counter-increment: inner-counter;
+                // Second level of numbers
+                &::before {
+                    content: counter(inner-counter) ". ";
+                }
+            }
+        }
+
+        &::before {
+            color: $gray-900;
+            content: counter(counter) ". ";
+            font-weight: $font-bold;
+        }
+    }
+}
+
+ul,
+ol {
+	&.narrow-width {
+		max-width: 750px;
+	}
+
+    &.two-col {
+        column-count: 2;
+        column-gap: $margin-large;
+
+        li {
+            break-inside: avoid;
+        }
+    }
+
+    &.three-col {
+        column-count: 3;
+        column-gap: $margin-large;
+
+        li {
+            break-inside: avoid;
+        }
+    }
+
+    &.four-col {
+        column-count: 4;
+        column-gap: $margin-large;
+
+        li {
+            break-inside: avoid;
+        }
+    }
+}
+
+.mini-nav {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    column-count: initial !important;
+    column-gap: initial !important;
+
+    li {
+        @include flex(1 0 auto);
+        box-sizing: border-box;
+        padding: 24px 15px 0 0;
+    }
+
+    &.two-col li {
+        width: 50%;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(small) {
+    ul, ol {
+        &.two-col {
+            column-count: 1;
+        }
+
+        &.three-col {
+            column-count: 1;
+
+            li {
+                padding-top: 24px;
+            }
+        }
+
+        &.four-col {
+            column-count: 1;
+
+            li {
+                padding-top: 24px;
+            }
+        }
+    }
+
+    .mini-nav li {
+        padding-top: 24px;
+        width: 100% !important;
+    }
+
+    .bullets li {
+        font-size: 1.5rem;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@include size(tiny) {
+    .bullets, .numbers {
+        li {
+            font-size: 1.4rem;
+            padding-left: 2em;
+
+            &::before {
+                left: 0.8em;
+                top: 0.8rem;
+                color: $blue-700;
+            }
+        }
+    }
+}
