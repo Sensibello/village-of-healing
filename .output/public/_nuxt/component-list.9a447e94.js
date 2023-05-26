@@ -1,0 +1,1 @@
+import{a as t,b as e,o}from"./entry.a1c1393a.js";const n={data(){return{title:"Life Lanes"}},head(){return{title:this.title}},layout:"default",components:{}};function a(r,s,c,l,i,p){return o(),e("h1",null,"Hello world!")}const d=t(n,[["render",a]]);export{d as default};

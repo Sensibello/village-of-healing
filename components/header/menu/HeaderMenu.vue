@@ -6,23 +6,23 @@
                     <button
                         type="button"
                         class="menu-button hamburger mobile-only"
-                        :aria-expanded="openLifelanes"
-                        :aria-label="openLifelanes ? 'Close Life Lanes menu' : 'Open Life Lanes menu'"
+                        :aria-expanded="openMenu"
+                        :aria-label="openMenu ? 'Close menu' : 'Openmenu'"
                         @click="toggleMenu"
                     >
                         
-                        <span class="lifelanes-logo-mobile" :class="{ 'is-active': openLifelanes }">
+                        <span class="lifelanes-logo-mobile" :class="{ 'is-active': openMenu }">
                             <img 
                                 src="~assets/svg/menu-arrow.svg" 
                                 class="" 
                                 alt=""                    
                                 
                             />
-                            <!-- <span>Life Lanes </span> -->
+                         
                         </span>
                     </button>
 
-                    <ul class="lifelanes-menu-panel" id="lifelanes-dropdown"  v-show="openLifelanes">
+                    <ul class="lifelanes-menu-panel" id="lifelanes-dropdown"  v-show="openMenu">
                         <li class="nav-item border-bottom">
                             <a class="nav-link" href="#" data-label="On the Road">
                                 <span class="align-together">
@@ -31,7 +31,7 @@
                                         class="on-the-road" 
                                         alt=""                    
                                     />
-                                    <p class="">On the Road</p>
+                                    <p class="">Link Title</p>
                                 </span>
                                 <span class="mobile-only nav-item-text">Tried and true tips for cars</span>
                             </a>
@@ -45,7 +45,7 @@
                                         class="household" 
                                         alt=""                    
                                     />
-                                    <p class="">Household</p>
+                                    <p class="">Link Title 2</p>
                                 </span>
                                 <span class="mobile-only nav-item-text">From moving to design, all under one roof</span>
                             </a>
@@ -59,7 +59,7 @@
                                         class="adventure" 
                                         alt=""                    
                                     />
-                                    <p class="">Adventure</p>
+                                    <p class="">Link Title 3</p>
                                 </span>
                                 <span class="mobile-only nav-item-text">Take off on your boat, motorcycle or RV</span>
                             </a>
@@ -73,7 +73,7 @@
                                         class="turning-points" 
                                         alt=""                    
                                     />
-                                    <p class="">Turning Points</p>
+                                    <p class="">Link Title 4</p>
                                 </span>
                                 <span class="mobile-only nav-item-text">Helping you to adjust to life's changes</span>
                             </a>
@@ -118,7 +118,7 @@
                     aria-label="Lifelanes" 
                     class="logo-text" 
                 />			
-                <span class="sr-only">Life Lanes home</span>
+                <span class="sr-only">Village of Healing home</span>
             </a>
         
             <ul 
@@ -126,7 +126,7 @@
                 itemscope="itemscope" 
                 itemtype="http://schema.org/SiteNavigationElement" r
                 ole="navigation" 
-                aria-label="Life Lanes"
+                aria-label=""
             >
 
                 <li class="nav-item" role="presentation">
@@ -136,7 +136,7 @@
                             class="on-the-road" 
                             alt=""                    
                         />
-                        <span class="nav-item-text">On the Road</span>
+                        <span class="nav-item-text">Link title</span>
                     </a>
                 </li>
 
@@ -147,7 +147,7 @@
                             class="household" 
                             alt=""                    
                         />
-                        <span class="nav-item-text">Household</span>	
+                        <span class="nav-item-text">Link title 2</span>	
                     </a>
                 </li>
 
@@ -158,7 +158,7 @@
                             class="adventure" 
                             alt=""                    
                         />
-                        <span class="nav-item-text">Adventure</span>	
+                        <span class="nav-item-text">Link title 3</span>	
                     </a>
                 </li>
 
@@ -169,16 +169,10 @@
                             class="turning-points" 
                             alt=""                    
                         />
-                        <span class="nav-item-text">Turning Points</span>	
+                        <span class="nav-item-text">Link title 4</span>	
                     </a>                  
                 </li>
 
-                <li class="nav-item saved-articles" role="presentation">
-                    <a href="/" class="btn btn-lg btn-block py-2 px-3 nav-link link-hover" data-label="Saved Articles">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 51.1113" focusable="false" aria-hidden="true"><title>Saved articles icon</title><path d="M42,8H10a2,2,0,0,0-2,2V49.1113a2,2,0,0,0,2.7432,1.857L26,44.8652l15.2568,6.1031A2,2,0,0,0,44,49.1113V10A2,2,0,0,0,42,8Z"></path><path d="M36,2a2,2,0,0,0-2-2H2A2,2,0,0,0,0,2V41a2,2,0,0,0,4,0V4H34A2,2,0,0,0,36,2Z"></path></svg>
-                        <span class="ml-2 mr-4">Saved Articles</span>
-                    </a>
-                </li>
                  <li class="desktop-only nav-item" role="">
                    <HeaderQuoteModal/>
                 </li>
@@ -206,7 +200,7 @@ export default {
   
    data() {
     return {
-      openLifelanes: false,
+      openMenu: false,
     };
   },
   methods: {
@@ -230,7 +224,7 @@ export default {
 	position: fixed;
     width: 100%;
     background: $white;
-	margin: 61px auto 0px auto;
+	margin: auto;
 	box-shadow: 0 5px 5px rgb(0 0 0 / 15%);
 
     .nav {

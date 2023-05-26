@@ -12,14 +12,13 @@
 
   <div class="quote-modal-body" id="quote-modal"  v-show="openModal">
     <img 
-        src="~assets/svg/progressive-logo.svg" 
+        src="~assets/svg/menu-arrow.svg" 
         class="prog-logo" 
         alt=""                    
     />
-    <p class="h1-subhead">Explore our products</p>
-    <ExplorePanel />
 
-    <p class="find-agent"><a href="https://progressiveagent.com/">Find an agent near you.</a></p>
+
+
 
   </div>
 
@@ -27,7 +26,7 @@
 </template>
 
 <script>
-import ExplorePanel from '~/components/global/ExplorePanel.vue'
+
 
 export default {
  
@@ -43,7 +42,7 @@ export default {
   },
 
   components: {
-    ExplorePanel
+    
   }
   
 }

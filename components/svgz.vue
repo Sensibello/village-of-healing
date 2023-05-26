@@ -1,5 +1,5 @@
 <template>
-	<!-- <img :class="classy" :src="require(`./assets/svg/${src}.svg`)"/> -->
+	<img :class="classy" :src="require(`./assets/svg/${src}.svg`)"/>
 </template>
 
 <script>

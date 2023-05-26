@@ -28,7 +28,7 @@
 					</div>
 
 					<button class="save-me">
-						<img src="~assets/svg/bookmark.svg"  alt="Save Article" />
+						
 							<div class="sr-only">
 								<span>Save</span> {{ article.title }}						
 						</div>

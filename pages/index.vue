@@ -15,7 +15,7 @@
 
 
 
-  <article-tile :articles="[     
+  <!-- <article-tile :articles="[     
     {
       title: 'I wanna rock and roll all night... and party every day', 
       url: '/',
@@ -64,9 +64,8 @@
       categoryUrl: 'on-the-road',
       readingTime: '4',
     },
-  ]" />
+  ]" /> -->
 
-  <BottomCta />
 
 </main>
 </template>
@@ -75,7 +74,7 @@
 /* import {COMPONENT NAME} from "~/components/..."; */
 import ArticleCta from "~/components/ArticleCta.vue"; 
 import ArticleTile from "~/components/ArticleTile.vue"; 
-import BottomCta from "~/components/BottomCta.vue"; 
+
 
 export default {
 
@@ -95,7 +94,7 @@ export default {
   components: {
     ArticleCta,
     ArticleTile,
-    BottomCta
+    
   }
   
 }
